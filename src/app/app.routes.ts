@@ -3,6 +3,7 @@ import { HomeComponent } from './home/home.component';
 import { ServiceAreasComponent } from './service-areas/service-areas.component';
 import { ServicesComponent } from './services/services.component';
 import { GetStartedComponent } from './get-started/get-started.component';
+import { BuildersComponent } from './builders/builders.component';
 import { KitchenCabinetsComponent } from './services/kitchen-cabinets/kitchen-cabinets.component';
 import { PantryCabinetsComponent } from './services/pantry-cabinets/pantry-cabinets.component';
 import { WetBarCabinetsComponent } from './services/wet-bar-cabinets/wet-bar-cabinets.component';
@@ -70,6 +71,7 @@ export const routes: Routes = [
   { path: 'services/new-construction-cabinetry', component: NewConstructionCabinetryComponent },
   { path: 'services/home-renovation-cabinet-services', component: HomeRenovationCabinetServicesComponent },
   { path: 'get-started', component: GetStartedComponent },
+  { path: 'builders', component: BuildersComponent },
   { path: 'locations/cedar-city', component: CedarCityComponent },
   { path: 'locations/enoch', component: EnochComponent },
   { path: 'locations/parowan', component: ParowanComponent },

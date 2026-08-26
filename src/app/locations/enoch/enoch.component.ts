@@ -174,13 +174,6 @@ export class EnochComponent implements OnInit {
       date: '2024-08-20'
     },
     {
-      name: 'Lisa Chen',
-      location: 'Enoch',
-      rating: 5,
-      text: 'Outstanding service from start to finish. Our custom bathroom vanities exceeded our expectations. Highly recommend for Enoch homeowners.',
-      date: '2024-07-15'
-    },
-    {
       name: 'David Wilson',
       location: 'Enoch',
       rating: 5,

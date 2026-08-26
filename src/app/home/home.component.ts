@@ -45,35 +45,7 @@ export class HomeComponent {
     }
   ];
 
-  testimonials = [
-    {
-      name: 'Sarah Johnson',
-      location: 'Cedar City, UT',
-      text: 'DeezCabinuts transformed our kitchen with beautiful custom cabinets. The quality and attention to detail is outstanding!',
-      rating: 5
-    },
-    {
-      name: 'Mike Thompson',
-      location: 'St. George, UT',
-      text: 'Professional service from start to finish. Our bathroom vanity is exactly what we envisioned.',
-      rating: 5
-    },
-    {
-      name: 'Lisa Chen',
-      location: 'Hurricane, UT',
-      text: 'The custom closet system they built for us is amazing. Everything has its place now!',
-      rating: 5
-    }
-  ];
-
   navigateToService(routePath: string) {
     this.router.navigate([routePath]);
-  }
-
-  scrollToSection(sectionId: string) {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
   }
 }
