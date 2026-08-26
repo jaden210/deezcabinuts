@@ -170,6 +170,18 @@ p {
   font-size: 1.1rem;
 }
 
+.btn-inverse {
+  background-color: var(--white);
+  color: var(--dark-brown);
+}
+
+.btn-inverse:hover {
+  background-color: var(--cream);
+  color: var(--dark-brown);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
 /* Container */
 .container {
   max-width: 1200px;

@@ -167,20 +167,6 @@ export class CedarCityComponent implements OnInit {
 
   testimonials: Testimonial[] = [
     {
-      name: 'Sarah Johnson',
-      location: 'Cedar City',
-      rating: 5,
-      text: 'DeezCabinuts transformed our outdated kitchen into a modern masterpiece. The craftsmanship is outstanding and they really understood our vision.',
-      date: '2024-08-15'
-    },
-    {
-      name: 'Mike Thompson',
-      location: 'Enoch',
-      rating: 5,
-      text: 'Excellent work on our bathroom renovation. The vanities they built are beautiful and functional. Highly recommend for anyone in Cedar City.',
-      date: '2024-07-22'
-    },
-    {
       name: 'Jennifer Davis',
       location: 'Cedar City',
       rating: 5,

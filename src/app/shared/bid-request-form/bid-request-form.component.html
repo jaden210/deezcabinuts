@@ -1,0 +1,85 @@
+<section class="bid-form" aria-labelledby="bid-form-heading">
+  <div class="bid-form-intro">
+    <h2 id="bid-form-heading">{{ heading }}</h2>
+    <p>{{ intro }}</p>
+  </div>
+
+  <div class="bid-form-success" *ngIf="submitted" role="status">
+    <h3>Bid request sent</h3>
+    <p>We have your request. If you attached plans, they went with the email. We will follow up at the address you entered.</p>
+    <button type="button" class="btn btn-primary" (click)="submitted = false">Send another request</button>
+  </div>
+
+  <form *ngIf="!submitted" [formGroup]="form" (ngSubmit)="onSubmit()" novalidate>
+    <input type="text" formControlName="website" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+    <div class="form-grid">
+      <label class="field">
+        <span>Company</span>
+        <input type="text" formControlName="company" autocomplete="organization">
+        <small class="error" *ngIf="form.get('company')?.touched && form.get('company')?.invalid">Company is required.</small>
+      </label>
+
+      <label class="field">
+        <span>Your name</span>
+        <input type="text" formControlName="name" autocomplete="name">
+        <small class="error" *ngIf="form.get('name')?.touched && form.get('name')?.invalid">Name is required.</small>
+      </label>
+
+      <label class="field">
+        <span>Email</span>
+        <input type="email" formControlName="email" autocomplete="email">
+        <small class="error" *ngIf="form.get('email')?.touched && form.get('email')?.invalid">A valid email is required so we can reply.</small>
+      </label>
+
+      <label class="field">
+        <span>Project city</span>
+        <input type="text" formControlName="city" autocomplete="address-level2">
+        <small class="error" *ngIf="form.get('city')?.touched && form.get('city')?.invalid">City is required.</small>
+      </label>
+
+      <label class="field">
+        <span>Project type</span>
+        <select formControlName="projectType">
+          <option value="" disabled>Select one</option>
+          <option *ngFor="let type of projectTypes" [value]="type.value">{{ type.label }}</option>
+        </select>
+        <small class="error" *ngIf="form.get('projectType')?.touched && form.get('projectType')?.invalid">Choose a project type.</small>
+      </label>
+
+      <label class="field">
+        <span>Supply only or install</span>
+        <select formControlName="fulfillment">
+          <option value="" disabled>Select one</option>
+          <option *ngFor="let option of fulfillmentOptions" [value]="option.value">{{ option.label }}</option>
+        </select>
+        <small class="error" *ngIf="form.get('fulfillment')?.touched && form.get('fulfillment')?.invalid">Choose supply only or install.</small>
+      </label>
+    </div>
+
+    <label class="field field-full">
+      <span>Plans or project notes</span>
+      <textarea formControlName="plansNotes" rows="5" placeholder="Paste a plan link, unit count, finish package, or anything we should bid from."></textarea>
+    </label>
+
+    <label class="field field-full">
+      <span>Attach plans (optional)</span>
+      <input type="file" accept=".pdf,.png,.jpg,.jpeg,.zip,.dwg,.dxf" (change)="onFileChange($event)">
+      <small *ngIf="selectedFile">Selected: {{ selectedFile.name }}</small>
+      <small class="error" *ngIf="fileError">{{ fileError }}</small>
+    </label>
+
+    <p class="form-note">Requests go to {{ salesEmail }}. We bid from plans. One job is finished and delivered before the next one starts.</p>
+
+    <div class="form-actions">
+      <button type="submit" class="btn btn-primary btn-large" [disabled]="sending">
+        {{ sending ? 'Sending…' : 'Send plans / request a bid' }}
+      </button>
+    </div>
+
+    <p class="submit-error" *ngIf="submitError" role="alert">
+      {{ submitError }}
+      <a [href]="mailtoHref">Email {{ salesEmail }}</a>
+    </p>
+  </form>
+</section>

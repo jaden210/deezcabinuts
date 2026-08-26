@@ -4,14 +4,15 @@
   <div class="container">
     <div class="hero-content">
       <h1 class="hero-title fade-in-up">
-        Handcrafted cabinets, made locally for your home
+        Cedar City cabinets for production work — and custom when you need it
       </h1>
       <p class="hero-subtitle fade-in-up">
-        Transform your space with expertly crafted custom cabinetry. Every piece is designed and built locally with premium materials, ensuring quality, durability, and a perfect fit for your home.
+        Local shop for tract homes, apartments, hotels, entry-level kitchens, and single homes.
+        Builders can send plans and request a bid. We finish and deliver one job before starting the next.
       </p>
       <div class="hero-buttons fade-in-up">
-        <a href="/get-started" class="btn btn-primary btn-large">Get Started for Free</a>
-        <a href="#services" class="btn btn-secondary-light btn-large" (click)="scrollToSection('services')">Our Services</a>
+        <a href="/get-started" class="btn btn-primary btn-large">Request a Bid</a>
+        <a href="/builders" class="btn btn-secondary-light btn-large">For Builders</a>
       </div>
     </div>
   </div>
@@ -22,7 +23,7 @@
   <div class="container">
     <div class="section-header text-center mb-5">
       <h2>Our Services</h2>
-      <p>Professional custom cabinet design and installation services throughout Southern Utah. From kitchen cabinets and bathroom vanities to closet systems and garage storage, we provide expert custom cabinetry solutions for home renovation and new construction projects.</p>
+      <p>Kitchen cabinets, vanities, closets, and storage for new construction and remodel work around Cedar City and Southern Utah. Production packages for builders, and custom pieces when the job needs them.</p>
     </div>
     
     <div class="row">
@@ -49,31 +50,31 @@
     <div class="row">
       <div class="col-6">
         <div class="about-content fade-in-up">
-          <h2>Why Choose DeezCabinuts?</h2>
-          <p>With years of experience in custom cabinetry, we bring your vision to life with precision craftsmanship and attention to detail. Every piece is custom-made to fit your space perfectly.</p>
+          <h2>A small shop in Cedar City</h2>
+          <p>We prefer production work: tract homes, apartments, hotels, lower-end townhomes, and entry-level kitchens. Custom is possible, but help is limited and there is almost no storage. If you need a bid from plans, send them over.</p>
           
           <div class="features">
             <div class="feature">
               <div class="feature-icon">✓</div>
               <div class="feature-text">
-                <h4>Custom & Tailor Fitted</h4>
-                <p>Every piece is designed specifically for your space and needs.</p>
+                <h4>Production and entry-level</h4>
+                <p>Packages built for repeat plans and job-site schedules.</p>
               </div>
             </div>
             
             <div class="feature">
               <div class="feature-icon">✓</div>
               <div class="feature-text">
-                <h4>Quality Materials</h4>
-                <p>We use only the finest materials for lasting beauty and durability.</p>
+                <h4>One job at a time</h4>
+                <p>We finish and deliver before the next job starts, so it ships when promised.</p>
               </div>
             </div>
             
             <div class="feature">
               <div class="feature-icon">✓</div>
               <div class="feature-text">
-                <h4>Expert Craftsmanship</h4>
-                <p>Skilled artisans create each piece with precision and care.</p>
+                <h4>Build, deliver, or install</h4>
+                <p>Supply only or we install. Custom work if the job fits the shop.</p>
               </div>
             </div>
           </div>
@@ -94,57 +95,32 @@
   <div class="container">
     <div class="section-header text-center mb-5">
       <h2>How We Work</h2>
-      <p>Our streamlined process ensures your project is completed on time and exceeds your expectations.</p>
+      <p>Bid from plans, build the job, then deliver or install. The next job waits until this one is out the door.</p>
     </div>
     
     <div class="process-steps">
       <div class="process-step fade-in-up">
         <div class="step-number">01</div>
-        <h3>Discuss & Discover</h3>
-        <p>We start by understanding your needs, space requirements, and design preferences to create a comprehensive plan.</p>
+        <h3>Send plans or details</h3>
+        <p>Builders and homeowners send plans or a short description. We bid the package from that.</p>
       </div>
       
       <div class="process-step fade-in-up">
         <div class="step-number">02</div>
-        <h3>Design & Refine</h3>
-        <p>Our designers create detailed renderings and work with you to perfect every detail of your custom cabinetry.</p>
+        <h3>We bid the job</h3>
+        <p>You get a price for supply only or install — tract, apartments, hotel, or a single home.</p>
       </div>
       
       <div class="process-step fade-in-up">
         <div class="step-number">03</div>
-        <h3>Production & Delivery</h3>
-        <p>Your project is crafted with precision in our workshop using the finest materials and techniques.</p>
+        <h3>We build that job</h3>
+        <p>The shop stays on one job. No yard full of unfinished boxes for the next project.</p>
       </div>
       
       <div class="process-step fade-in-up">
         <div class="step-number">04</div>
-        <h3>Installation</h3>
-        <p>Our expert installers ensure your new cabinetry is installed perfectly and ready to enjoy.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Testimonials Section -->
-<section class="testimonials py-5" style="background-color: var(--gray-light);">
-  <div class="container">
-    <div class="section-header text-center mb-5">
-      <h2>What Our Customers Say</h2>
-      <p>Don't just take our word for it - hear from our satisfied customers.</p>
-    </div>
-    
-    <div class="row">
-      <div class="col-4" *ngFor="let testimonial of testimonials">
-        <div class="testimonial-card fade-in-up">
-          <div class="testimonial-rating">
-            <span *ngFor="let star of [1,2,3,4,5]" class="star">★</span>
-          </div>
-          <p class="testimonial-text">"{{ testimonial.text }}"</p>
-          <div class="testimonial-author">
-            <strong>{{ testimonial.name }}</strong>
-            <span>{{ testimonial.location }}</span>
-          </div>
-        </div>
+        <h3>Deliver or install</h3>
+        <p>Pick up, delivery, or install — then we start the next job.</p>
       </div>
     </div>
   </div>
@@ -153,11 +129,11 @@
 <!-- CTA Section -->
 <section class="cta py-5" style="background-color: var(--primary-brown); color: var(--white);">
   <div class="container text-center">
-    <h2 class="fade-in-up">Ready to Transform Your Space?</h2>
-    <p class="fade-in-up">Your dream project starts here. Contact us for a free consultation and estimate.</p>
+    <h2 class="fade-in-up">Need cabinets bid?</h2>
+    <p class="fade-in-up">Send plans or a short description. Production, entry-level, or custom if it fits the shop.</p>
     <div class="cta-buttons fade-in-up">
-      <a href="/contact" class="btn btn-secondary-light btn-large">Contact Us</a>
-      <a href="/get-started" class="btn btn-primary btn-large">Get Started for Free</a>
+      <a href="/builders" class="btn btn-secondary-light btn-large">Builders</a>
+      <a href="/get-started" class="btn btn-inverse btn-large">Request a Bid</a>
     </div>
   </div>
 </section>
