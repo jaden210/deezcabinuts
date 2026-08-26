@@ -1,0 +1,343 @@
+// Hero Section
+.hero {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, var(--dark-brown) 0%, var(--primary-brown) 100%);
+  color: var(--white);
+  overflow: hidden;
+
+  .hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('/assets/hero-bg.jpg') center/cover;
+    opacity: 0.1;
+    z-index: 1;
+  }
+
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    color: var(--white);
+
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+    line-height: 1.6;
+    color: var(--white);
+
+  }
+
+  .hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+// How It Works Section
+.how-it-works {
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .step-card {
+    text-align: center;
+    padding: 2rem;
+    border-radius: 12px;
+    background: var(--white);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .step-number {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: var(--primary-brown);
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin: 0 auto 1.5rem;
+    }
+
+    h3 {
+      color: var(--primary-brown);
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+
+    p {
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+  }
+}
+
+// Why Choose Us Section
+.why-choose-us {
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .benefit-card {
+    text-align: center;
+    padding: 2rem;
+    border-radius: 12px;
+    background: var(--white);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    .benefit-icon {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: var(--primary-brown);
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
+      font-size: 2rem;
+    }
+
+    h3 {
+      color: var(--primary-brown);
+      margin-bottom: 1rem;
+      font-size: 1.25rem;
+    }
+
+    p {
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+  }
+}
+
+// Services Overview Section
+.services-overview {
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .service-card {
+    padding: 2rem;
+    border-radius: 12px;
+    background: var(--white);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid var(--primary-brown);
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    h3 {
+      color: var(--primary-brown);
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+
+    p {
+      color: var(--text-color);
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        padding: 0.5rem 0;
+        color: var(--text-color);
+        position: relative;
+        padding-left: 1.5rem;
+
+        &:before {
+          content: "✓";
+          position: absolute;
+          left: 0;
+          color: var(--primary-brown);
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+// CTA Section
+.cta {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  color: var(--white);
+
+  h2 {
+    color: var(--white);
+    font-weight: 700;
+  }
+
+  p {
+    color: var(--white);
+    opacity: 0.95;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .small {
+    opacity: 0.9;
+    font-size: 0.9rem;
+    color: var(--white);
+  }
+}
+
+// Animation classes
+.fade-in-up {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Responsive design
+@media (max-width: 768px) {
+  .hero {
+    min-height: 70vh;
+    padding: 2rem 0;
+    
+    .hero-content {
+      padding: 0 1rem;
+    }
+    
+    .hero-title {
+      font-size: 2.2rem;
+      margin-bottom: 1.25rem;
+      line-height: 1.3;
+    }
+    
+    .hero-subtitle {
+      font-size: 1.1rem;
+      margin-bottom: 2.5rem;
+      line-height: 1.5;
+      padding: 0 0.5rem;
+    }
+    
+    .hero-buttons {
+      gap: 1.5rem;
+      margin-top: 1rem;
+      
+      .btn {
+        min-width: 280px;
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+      }
+    }
+  }
+  
+  .container {
+    padding: 0 1.5rem;
+  }
+
+  .steps-grid,
+  .benefits-grid,
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .step-card,
+  .benefit-card,
+  .service-card {
+    padding: 1.5rem;
+  }
+}
+
+// Extra small mobile devices
+@media (max-width: 480px) {
+  .hero {
+    min-height: 65vh;
+    padding: 1.5rem 0;
+    
+    .hero-title {
+      font-size: 1.9rem;
+      margin-bottom: 1rem;
+    }
+    
+    .hero-subtitle {
+      font-size: 1rem;
+      margin-bottom: 2rem;
+      padding: 0 1rem;
+    }
+    
+    .hero-buttons {
+      .btn {
+        min-width: 260px;
+        padding: 0.875rem 1.25rem;
+        font-size: 0.95rem;
+      }
+    }
+  }
+  
+  .container {
+    padding: 0 1rem;
+  }
+}

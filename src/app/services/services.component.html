@@ -1,0 +1,33 @@
+<div class="services-container">
+  <div class="services-header">
+    <h1>Our Services</h1>
+    <p>Discover our comprehensive range of custom cabinetry solutions for every room in your home</p>
+  </div>
+
+  <div class="services-content">
+    <div class="service-category" *ngFor="let category of serviceCategories">
+      <h2 class="category-title">{{ category.name }}</h2>
+      <div class="services-grid">
+        <div 
+          class="service-tile" 
+          *ngFor="let service of category.services"
+          [class.clickable]="service.route"
+          (click)="onServiceClick(service)"
+        >
+          <div class="service-image">
+            <img [src]="service.imageUrl" 
+                 [alt]="service.name + ' custom cabinet solution'"
+                 loading="lazy"
+                 width="400"
+                 height="200">
+          </div>
+          <div class="service-content">
+            <h3 class="service-name">{{ service.name }}</h3>
+            <p class="service-description">{{ service.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

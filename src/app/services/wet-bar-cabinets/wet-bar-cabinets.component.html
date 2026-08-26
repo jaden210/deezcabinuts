@@ -1,0 +1,275 @@
+<!-- Wet Bar Cabinets Page - SEO Optimized -->
+<main class="wet-bar-cabinets-page" role="main">
+  
+  <!-- Hero Section -->
+  <section class="hero-section" aria-labelledby="hero-heading">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 id="hero-heading" class="hero-title">
+          Custom Wet Bar Cabinets
+          <span class="subtitle">Elevate Your Entertainment with Sophisticated Storage</span>
+        </h1>
+        <p class="hero-description">
+          Transform your entertaining space into the ultimate host destination. I create custom wet bar cabinet 
+          systems that combine elegant storage for your wine and spirits collection with functional design 
+          that makes entertaining effortless. From intimate wine bars to full-service entertainment centers, 
+          every solution is crafted to enhance your hosting experience.
+        </p>
+        <div class="hero-actions">
+          <button class="cta-primary" (click)="onGetQuoteClick()" aria-label="Get started for free with wet bar cabinets">
+            Get Started for Free
+          </button>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="/assets/wet-bar/wetbar.jpg" 
+             alt="Elegant custom wet bar cabinets with wine storage and sophisticated textured melamine finishes"
+             loading="eager"
+             width="600"
+             height="400">
+      </div>
+    </div>
+  </section>
+
+  <!-- Introduction Section -->
+  <section class="introduction-section" aria-labelledby="intro-heading">
+    <div class="container">
+      <h2 id="intro-heading">Why Choose My Custom Wet Bar Cabinets?</h2>
+      <p class="intro-text">
+        At Deez Cabinuts, I understand that a well-designed wet bar is more than storage—it's the heart of 
+        your entertaining space. That's why I'm personally dedicated to creating custom wet bar cabinet systems 
+        that not only showcase your collection beautifully but also make hosting memorable gatherings effortless. 
+        With over a decade of experience in custom entertainment cabinetry, I combine sophisticated design with 
+        practical functionality.
+      </p>
+      <p class="intro-text">
+        I work closely with you to understand your entertaining style, collection needs, and space requirements. 
+        From wine enthusiasts to cocktail connoisseurs, I create personalized solutions that reflect your taste 
+        and enhance every gathering. Every detail is personally crafted to bring elegance and efficiency to 
+        your entertainment space.
+      </p>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features-section" aria-labelledby="features-heading">
+    <div class="container">
+      <h2 id="features-heading">What Makes My Wet Bar Cabinets Special</h2>
+      <div class="features-grid">
+        <article class="feature-card" *ngFor="let feature of features">
+          <div class="feature-icon" [attr.aria-label]="feature.icon + ' icon'">{{ feature.icon }}</div>
+          <h3 class="feature-title">{{ feature.title }}</h3>
+          <p class="feature-description">{{ feature.description }}</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wet Bar Styles Section -->
+  <section class="styles-section" aria-labelledby="styles-heading">
+    <div class="container">
+      <h2 id="styles-heading">Wet Bar Cabinet Solutions for Every Entertainment Style</h2>
+      <p class="section-intro">
+        Whether you're a wine collector, cocktail enthusiast, or love hosting dinner parties, I have a custom 
+        wet bar solution that will transform your space into the perfect entertainment destination. Each design 
+        is tailored to your collection, space, and entertaining preferences.
+      </p>
+      
+      <div class="styles-grid">
+        <article class="style-card" *ngFor="let style of wetBarStyles">
+          <div class="style-content">
+            <h3 class="style-name">{{ style.name }}</h3>
+            <p class="style-description">{{ style.description }}</p>
+            <ul class="style-features" aria-label="Features of {{ style.name }} solution">
+              <li *ngFor="let feature of style.features">{{ feature }}</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Materials Section -->
+  <section class="materials-section" aria-labelledby="materials-heading">
+    <div class="container">
+      <h2 id="materials-heading">Premium Materials for Elegant Entertainment</h2>
+      <p class="section-intro">
+        I believe that exceptional wet bars deserve exceptional materials. That's why I source only the finest 
+        materials and moisture-resistant finishes to ensure your wet bar cabinets not only look stunning but 
+        also withstand the unique demands of an entertainment environment.
+      </p>
+      
+      <div class="materials-grid">
+        <article class="material-card" *ngFor="let material of materials">
+          <h3 class="material-name">{{ material.name }}</h3>
+          <p class="material-description">{{ material.description }}</p>
+          <ul class="material-benefits" [attr.aria-label]="'Benefits of ' + material.name">
+            <li *ngFor="let benefit of material.benefits">{{ benefit }}</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Storage Features Section -->
+  <section class="storage-section" aria-labelledby="storage-heading">
+    <div class="container">
+      <div class="storage-content">
+        <div class="storage-text">
+          <h2 id="storage-heading">Specialized Storage & Organization Features</h2>
+          <p>
+            The magic of a great wet bar lies in thoughtful organization and specialized storage solutions. 
+            I incorporate proven storage systems and innovative features specifically designed for wine, spirits, 
+            glassware, and bar accessories. Every element is designed to make entertaining smooth and enjoyable.
+          </p>
+          <ul class="storage-list" aria-label="Available storage features">
+            <li *ngFor="let feature of storageFeatures">{{ feature }}</li>
+          </ul>
+        </div>
+        <div class="storage-image">
+          <img src="/assets/wet-bar/wetbar.jpg" 
+               alt="Detailed view of wet bar storage features including wine racks and glassware organization"
+               loading="lazy"
+               width="500"
+               height="400">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Finishes Section -->
+  <section class="finishes-section" aria-labelledby="finishes-heading">
+    <div class="container">
+      <h2 id="finishes-heading">Elegant Textured Melamine Finishes</h2>
+      <p class="section-intro">
+        Create the perfect ambiance for your entertainment space with my premium textured melamine collection. 
+        These sophisticated surfaces offer the beauty of luxury materials with superior moisture resistance and 
+        easy maintenance—perfect for wet bar environments where style meets functionality.
+      </p>
+      
+      <div class="finishes-showcase">
+        <div class="finish-samples">
+          <img src="/assets/wet-bar/wetbar.jpg" 
+               alt="Collection of elegant textured melamine finish samples perfect for wet bar cabinets"
+               loading="lazy"
+               width="600"
+               height="400">
+        </div>
+        <div class="finishes-list">
+          <h3>Textured Melamine Options:</h3>
+          <ul aria-label="Wet bar cabinet finish options">
+            <li *ngFor="let finish of finishOptions">{{ finish }}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section class="process-section" aria-labelledby="process-heading">
+    <div class="container">
+      <h2 id="process-heading">My Wet Bar Cabinet Process</h2>
+      <p class="section-intro">
+        From initial entertainment assessment to final setup, my streamlined process ensures your wet bar cabinet 
+        project is completed efficiently and to your complete satisfaction. Here's what you can expect when you 
+        choose Deez Cabinuts for your entertainment space transformation.
+      </p>
+      
+      <div class="process-steps">
+        <article class="process-step" *ngFor="let step of processSteps">
+          <div class="step-number">{{ step.step }}</div>
+          <div class="step-content">
+            <h3 class="step-title">{{ step.title }}</h3>
+            <p class="step-description">{{ step.description }}</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="benefits-section" aria-labelledby="benefits-heading">
+    <div class="container">
+      <h2 id="benefits-heading">Benefits of Custom Wet Bar Cabinet Entertainment</h2>
+      <div class="benefits-grid">
+        <div class="benefits-text">
+          <p>
+            Investing in custom wet bar cabinets transforms not just your space, but your entire entertaining 
+            experience. When you choose a custom wet bar solution from Deez Cabinuts, you're investing in a 
+            system that becomes the centerpiece of memorable gatherings and elevates every occasion.
+          </p>
+          <ul class="benefits-list" aria-label="Benefits of custom wet bar cabinets">
+            <li *ngFor="let benefit of benefits">{{ benefit }}</li>
+          </ul>
+        </div>
+        <div class="benefits-image">
+          <img src="/assets/wet-bar/wetbar.jpg" 
+               alt="Custom wet bar cabinet installation showing elegant entertainment setup and wine storage"
+               loading="lazy"
+               width="500"
+               height="400">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section" aria-labelledby="faq-heading">
+    <div class="container">
+      <h2 id="faq-heading">Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <article class="faq-item" *ngFor="let faq of faqs">
+          <h3 class="faq-question">{{ faq.question }}</h3>
+          <p class="faq-answer">{{ faq.answer }}</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section" aria-labelledby="cta-heading">
+    <div class="container">
+      <div class="cta-content">
+        <h2 id="cta-heading">Ready to Elevate Your Entertainment Space?</h2>
+        <p class="cta-text">
+          Don't let another gathering go by without the perfect wet bar setup. Get started with Deez Cabinuts 
+          today for a free consultation. I'm ready to help you design and build the custom wet bar cabinet 
+          system that will make every occasion special and every guest impressed.
+        </p>
+        <div class="cta-actions">
+          <button class="cta-primary large" (click)="onGetQuoteClick()" aria-label="Get started for free with wet bar cabinets">
+            Get Started for Free
+          </button>
+        </div>
+        <p class="cta-guarantee">
+          <strong>100% Satisfaction Guarantee</strong> - I'm not happy until you're completely satisfied with your entertainment space.
+        </p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- Structured Data for SEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Custom Wet Bar Cabinets",
+  "description": "Premium custom wet bar cabinet design and installation services. Transform your entertainment space with sophisticated wine storage, glassware organization, and modern textured melamine finishes.",
+  "provider": {
+    "@type": "Organization",
+    "name": "Deez Cabinuts",
+    "url": "https://deezcabnuts.com"
+  },
+  "areaServed": {
+    "@type": "Place",
+    "name": "Local Service Area"
+  },
+  "serviceType": "Custom Wet Bar Cabinet Installation",
+  "offers": {
+    "@type": "Offer",
+    "description": "Free consultation and quote for custom wet bar cabinets"
+  }
+}
+</script>

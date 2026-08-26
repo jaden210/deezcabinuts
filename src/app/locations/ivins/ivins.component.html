@@ -1,0 +1,223 @@
+<!-- Hero Section with Local Focus -->
+<section class="hero-section" role="banner" aria-label="Ivins custom cabinets hero">
+  <div class="container">
+    <h1 class="hero-title">Custom Cabinets Ivins UT</h1>
+    <p class="hero-subtitle">
+      Transform your Ivins home with premium custom cabinetry. Expert craftsmanship serving Ivins and Washington County since 2019.
+    </p>
+    <div class="hero-cta">
+      <a href="/get-started" class="btn btn-primary btn-large" aria-label="Get free consultation for custom cabinets">Get Free Consultation</a>
+    </div>
+  </div>
+</section>
+
+<!-- Local Service Area Section -->
+<section class="local-area-section py-5" aria-labelledby="service-areas-heading">
+  <div class="container">
+    <header class="section-header text-center">
+      <h2 id="service-areas-heading">Serving Ivins & Washington County</h2>
+      <p class="section-subtitle">Proudly serving the Ivins community with custom cabinetry solutions</p>
+    </header>
+
+    <div class="areas-grid" role="list">
+      <article class="area-card" role="listitem">
+        <h3>Ivins</h3>
+        <p>Complete custom cabinetry services for your Ivins home</p>
+      </article>
+      <article class="area-card" role="listitem">
+        <h3>Santa Clara</h3>
+        <p>Quality craftsmanship serving the Santa Clara community</p>
+      </article>
+      <article class="area-card" role="listitem">
+        <h3>St. George</h3>
+        <p>Custom solutions for St. George residents</p>
+      </article>
+      <article class="area-card" role="listitem">
+        <h3>La Verkin</h3>
+        <p>Serving all Ivins surrounding areas</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Services Section -->
+<section class="services-section py-5 bg-light" aria-labelledby="services-heading">
+  <div class="container">
+    <header class="section-header text-center">
+      <h2 id="services-heading">Custom Cabinetry Services in Ivins</h2>
+      <p class="section-subtitle">Specializing in premium custom cabinets for Ivins homes</p>
+    </header>
+
+    <div class="services-grid" role="list">
+      <article class="service-card" *ngFor="let service of services; trackBy: trackByServiceTitle" role="listitem">
+        <div class="service-icon" aria-hidden="true">
+          <i class="material-icons">{{ service.icon }}</i>
+        </div>
+        <h3>{{ service.title }}</h3>
+        <p>{{ service.description }}</p>
+        <a [href]="service.link" class="service-link" [attr.aria-label]="'Learn more about ' + service.title">Learn More →</a>
+      </article>
+
+      <article class="service-card view-all-card" role="listitem">
+        <div class="service-icon" aria-hidden="true">
+          <i class="material-icons">apps</i>
+        </div>
+        <h3>View All Services</h3>
+        <p>Explore our complete range of custom cabinetry solutions for every room in your home</p>
+        <a href="/services" class="service-link" aria-label="View all cabinet services">See All Services →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Why Choose Us Section -->
+<section class="why-choose-section py-5" aria-labelledby="why-choose-heading">
+  <div class="container">
+    <header class="section-header text-center">
+      <h2 id="why-choose-heading">Why Choose DeezCabinuts in Ivins?</h2>
+      <p class="section-subtitle">Local expertise with national-quality craftsmanship</p>
+    </header>
+
+    <div class="features-grid" role="list">
+      <article class="feature-item" role="listitem">
+        <div class="feature-icon" aria-hidden="true">
+          <i class="material-icons">location_on</i>
+        </div>
+        <h3>Local Ivins Business</h3>
+        <p>Family-owned and operated in Washington County, serving Ivins with pride</p>
+      </article>
+
+      <article class="feature-item" role="listitem">
+        <div class="feature-icon" aria-hidden="true">
+          <i class="material-icons">handyman</i>
+        </div>
+        <h3>Expert Craftsmanship</h3>
+        <p>Over 15 years of experience creating beautiful, functional custom cabinets</p>
+      </article>
+
+      <article class="feature-item" role="listitem">
+        <div class="feature-icon" aria-hidden="true">
+          <i class="material-icons">schedule</i>
+        </div>
+        <h3>On-Time Delivery</h3>
+        <p>We respect your time and deliver projects on schedule, every time</p>
+      </article>
+
+      <article class="feature-item" role="listitem">
+        <div class="feature-icon" aria-hidden="true">
+          <i class="material-icons">verified</i>
+        </div>
+        <h3>Quality Guarantee</h3>
+        <p>Every project backed by our satisfaction guarantee</p>
+      </article>
+
+      <article class="feature-item" role="listitem">
+        <div class="feature-icon" aria-hidden="true">
+          <i class="material-icons">design_services</i>
+        </div>
+        <h3>Free Design Consultation</h3>
+        <p>Complimentary design consultation to bring your vision to life</p>
+      </article>
+
+      <article class="feature-item" role="listitem">
+        <div class="feature-icon" aria-hidden="true">
+          <i class="material-icons">support_agent</i>
+        </div>
+        <h3>Personalized Service</h3>
+        <p>Direct communication with your project manager throughout</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="testimonials-section py-5 bg-light">
+  <div class="container">
+    <div class="section-header text-center">
+      <h2>What Ivins Customers Say</h2>
+      <p class="section-subtitle">Real reviews from real Ivins homeowners</p>
+    </div>
+
+    <div class="testimonials-grid">
+      <div class="testimonial-card" *ngFor="let testimonial of testimonials">
+        <div class="testimonial-rating">
+          <i class="material-icons" *ngFor="let star of [].constructor(testimonial.rating)">star</i>
+        </div>
+        <p class="testimonial-text">"{{ testimonial.text }}"</p>
+        <div class="testimonial-author">
+          <strong>{{ testimonial.name }}</strong>
+          <span>{{ testimonial.location }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Process Section -->
+<section class="process-section py-5">
+  <div class="container">
+    <div class="section-header text-center">
+      <h2>Our Ivins Process</h2>
+      <p class="section-subtitle">From concept to completion in Ivins</p>
+    </div>
+
+    <div class="process-steps">
+      <div class="process-step">
+        <div class="step-number">1</div>
+        <h3>Free Consultation</h3>
+        <p>We visit your Ivins home, discuss your vision, and provide design recommendations</p>
+      </div>
+
+      <div class="process-step">
+        <div class="step-number">2</div>
+        <h3>Custom Design</h3>
+        <p>Our designers create detailed plans tailored to your space and style preferences</p>
+      </div>
+
+      <div class="process-step">
+        <div class="step-number">3</div>
+        <h3>Craftsmanship</h3>
+        <p>Each cabinet is handcrafted in our workshop using premium materials</p>
+      </div>
+
+      <div class="process-step">
+        <div class="step-number">4</div>
+        <h3>Professional Installation</h3>
+        <p>Expert installation by our certified team, ensuring perfect fit and finish</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Section with Schema -->
+<section class="faq-section py-5 bg-light" aria-labelledby="faq-heading">
+  <div class="container">
+    <header class="section-header text-center">
+      <h2 id="faq-heading">Ivins Cabinet Questions</h2>
+      <p class="section-subtitle">Frequently asked questions about our Ivins services</p>
+    </header>
+
+    <div class="faq-accordion" role="list">
+      <article class="faq-item" *ngFor="let faq of faqs; let i = index; trackBy: trackByFaqQuestion" role="listitem">
+        <button class="faq-question" (click)="toggleFaq($event)" [attr.aria-expanded]="false" [attr.aria-controls]="'faq-answer-' + i" [id]="'faq-question-' + i">
+          <span>{{ faq.question }}</span>
+          <i class="material-icons" aria-hidden="true">expand_more</i>
+        </button>
+        <div class="faq-answer" [id]="'faq-answer-' + i" role="region" [attr.aria-labelledby]="'faq-question-' + i">
+          <p>{{ faq.answer }}</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section py-5" role="complementary" aria-labelledby="cta-heading">
+  <div class="container text-center">
+    <h2 id="cta-heading">Ready to Transform Your Ivins Home?</h2>
+    <p>Contact DeezCabinuts today for your free custom cabinet consultation in Ivins, UT</p>
+    <div class="cta-buttons">
+      <a href="/get-started" class="btn btn-primary btn-large" aria-label="Get started with free consultation">Get Started for Free</a>
+    </div>
+  </div>
+</section>

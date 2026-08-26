@@ -1,0 +1,17 @@
+/* TEAM */
+  Developer: DeezCabinuts Development Team
+  Site: https://deezcabnuts.com
+  Location: Cedar City, Utah, USA
+
+/* SITE */
+  Last update: 2025/09/17
+  Language: English
+  Doctype: HTML5
+  IDE: Visual Studio Code, Cursor
+  Framework: Angular 20
+  Hosting: Firebase
+
+/* THANKS */
+  Angular Team
+  Google Fonts
+  Material Design Icons

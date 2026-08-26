@@ -1,0 +1,248 @@
+<!-- Pantry Cabinets Page - SEO Optimized -->
+<main class="pantry-cabinets-page" role="main">
+  
+  <!-- Hero Section -->
+  <section class="hero-section" aria-labelledby="hero-heading">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 id="hero-heading" class="hero-title">
+          Custom Pantry Cabinets
+          <span class="subtitle">Transform Your Food Storage with Smart Organization</span>
+        </h1>
+        <p class="hero-description">
+          Say goodbye to cluttered, disorganized pantries. I create custom pantry cabinet systems 
+          that maximize your storage space, improve accessibility, and bring order to your kitchen. 
+          From walk-in pantries to compact reach-in spaces, every solution is designed to fit 
+          your specific needs and lifestyle.
+        </p>
+        <div class="hero-actions">
+          <button class="cta-primary" (click)="onGetQuoteClick()" aria-label="Get started for free with pantry cabinets">
+            Get Started for Free
+          </button>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="/assets/kitchen/ready.jpg" 
+             alt="Beautiful organized custom pantry cabinets with textured melamine finishes"
+             loading="eager"
+             width="600"
+             height="400">
+      </div>
+    </div>
+  </section>
+
+  <!-- Introduction Section -->
+  <section class="introduction-section" aria-labelledby="intro-heading">
+    <div class="container">
+      <h2 id="intro-heading">Why Choose My Custom Pantry Cabinets?</h2>
+      <p class="intro-text">
+        At Deez Cabinuts, I understand that a well-organized pantry is the foundation of an efficient kitchen. 
+        That's why I'm personally dedicated to creating custom pantry cabinet systems that not only maximize 
+        your storage capacity but also make every item easily accessible. With over a decade of experience 
+        in custom storage solutions, I combine smart organization principles with beautiful design.
+      </p>
+      <p class="intro-text">
+        I work closely with you to understand your storage challenges, shopping habits, and family needs. 
+        From the initial assessment to the final organization setup, I personally ensure every detail is 
+        optimized for your lifestyle and brings lasting order to your home.
+      </p>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features-section" aria-labelledby="features-heading">
+    <div class="container">
+      <h2 id="features-heading">What Makes My Pantry Cabinets Special</h2>
+      <div class="features-grid">
+        <article class="feature-card" *ngFor="let feature of features">
+          <div class="feature-icon" [attr.aria-label]="feature.icon + ' icon'">{{ feature.icon }}</div>
+          <h3 class="feature-title">{{ feature.title }}</h3>
+          <p class="feature-description">{{ feature.description }}</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pantry Styles Section -->
+  <section class="styles-section" aria-labelledby="styles-heading">
+    <div class="container">
+      <h2 id="styles-heading">Pantry Cabinet Solutions for Every Space</h2>
+      <p class="section-intro">
+        No matter the size or shape of your pantry space, I have a custom solution that will transform 
+        it into an organized, efficient storage system. Each design is tailored to maximize your specific 
+        space while ensuring easy access to all your stored items.
+      </p>
+      
+      <div class="styles-grid">
+        <article class="style-card" *ngFor="let style of pantryStyles">
+          <div class="style-content">
+            <h3 class="style-name">{{ style.name }}</h3>
+            <p class="style-description">{{ style.description }}</p>
+            <ul class="style-features" aria-label="Features of {{ style.name }} solution">
+              <li *ngFor="let feature of style.features">{{ feature }}</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Materials Section -->
+  <section class="materials-section" aria-labelledby="materials-heading">
+    <div class="container">
+      <h2 id="materials-heading">Premium Materials for Lasting Organization</h2>
+      <p class="section-intro">
+        I believe that quality storage solutions start with the right materials. That's why I source 
+        only the finest materials and cutting-edge finishes to ensure your pantry cabinets not only 
+        look beautiful but also withstand daily use for years to come.
+      </p>
+      
+      <div class="materials-grid">
+        <article class="material-card" *ngFor="let material of materials">
+          <h3 class="material-name">{{ material.name }}</h3>
+          <p class="material-description">{{ material.description }}</p>
+          <ul class="material-benefits" [attr.aria-label]="'Benefits of ' + material.name">
+            <li *ngFor="let benefit of material.benefits">{{ benefit }}</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Organization Features Section -->
+  <section class="organization-section">
+    <div class="container">
+      <h2>Smart Organization Features</h2>
+      <p>
+        The key to a functional pantry is intelligent organization. I incorporate proven storage
+        solutions and innovative features that make every item easily accessible while maximizing
+        your available space. Every element is designed with daily use in mind.
+      </p>
+      <div class="centered-list">
+        <div class="list-row" *ngFor="let feature of organizationFeatures">
+          <span class="bullet">•</span>
+          <span class="item-text">{{ feature }}</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Finishes Section -->
+  <section class="finishes-section">
+    <div class="container">
+      <h2>Modern Textured Melamine Finishes</h2>
+      <p class="section-intro">
+        Discover the latest in contemporary cabinet finishes with my premium textured melamine collection.
+        These cutting-edge surfaces offer the beauty of natural materials with superior durability and easy maintenance.
+        Perfect for pantry environments where cleanliness and durability are essential.
+      </p>
+      <h3>Textured Melamine Options:</h3>
+      <div class="centered-list">
+        <div class="list-row" *ngFor="let finish of finishOptions">
+          <span class="bullet">•</span>
+          <span class="item-text">{{ finish }}</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section class="process-section" aria-labelledby="process-heading">
+    <div class="container">
+      <h2 id="process-heading">My Pantry Cabinet Process</h2>
+      <p class="section-intro">
+        From initial assessment to final organization, my streamlined process ensures your pantry cabinet 
+        project is completed efficiently and to your complete satisfaction. Here's what you can expect 
+        when you choose Deez Cabinuts for your pantry transformation.
+      </p>
+      
+      <div class="process-steps">
+        <article class="process-step" *ngFor="let step of processSteps">
+          <div class="step-number">{{ step.step }}</div>
+          <div class="step-content">
+            <h3 class="step-title">{{ step.title }}</h3>
+            <p class="step-description">{{ step.description }}</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="benefits-section" aria-labelledby="benefits-heading">
+    <div class="container">
+      <h2 id="benefits-heading">Benefits of Custom Pantry Cabinet Organization</h2>
+      <p>
+        Investing in custom pantry cabinets offers life-changing benefits that go far beyond simple storage. 
+        When you choose a custom pantry solution from Deez Cabinuts, you're investing in a system that 
+        transforms how your kitchen functions and how your family interacts with food storage.
+      </p>
+      <div class="centered-list">
+        <div class="list-row" *ngFor="let benefit of benefits">
+          <span class="bullet">•</span>
+          <span class="item-text">{{ benefit }}</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section" aria-labelledby="faq-heading">
+    <div class="container">
+      <h2 id="faq-heading">Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <article class="faq-item" *ngFor="let faq of faqs">
+          <h3 class="faq-question">{{ faq.question }}</h3>
+          <p class="faq-answer">{{ faq.answer }}</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section" aria-labelledby="cta-heading">
+    <div class="container">
+      <div class="cta-content">
+        <h2 id="cta-heading">Ready to Transform Your Pantry?</h2>
+        <p class="cta-text">
+          Don't let a disorganized pantry stress you out any longer. Get started with Deez Cabinuts today 
+          for a free consultation. I'm ready to help you design and build the perfect custom pantry cabinet 
+          system that will bring order and efficiency to your kitchen.
+        </p>
+        <div class="cta-actions">
+          <button class="cta-primary large" (click)="onGetQuoteClick()" aria-label="Get started for free with pantry cabinets">
+            Get Started for Free
+          </button>
+        </div>
+        <p class="cta-guarantee">
+          <strong>100% Satisfaction Guarantee</strong> - I'm not happy until you're completely satisfied with your organized pantry.
+        </p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- Structured Data for SEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Custom Pantry Cabinets",
+  "description": "Premium custom pantry cabinet design and installation services. Transform your food storage with organized, accessible cabinet systems featuring modern textured melamine finishes.",
+  "provider": {
+    "@type": "Organization",
+    "name": "Deez Cabinuts",
+    "url": "https://deezcabnuts.com"
+  },
+  "areaServed": {
+    "@type": "Place",
+    "name": "Local Service Area"
+  },
+  "serviceType": "Custom Pantry Cabinet Installation",
+  "offers": {
+    "@type": "Offer",
+    "description": "Free consultation and quote for custom pantry cabinets"
+  }
+}
+</script>

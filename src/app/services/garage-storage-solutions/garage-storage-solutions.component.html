@@ -1,0 +1,291 @@
+<!-- Garage Storage Solutions Page - SEO Optimized -->
+<main class="garage-storage-solutions-page" role="main">
+  
+  <!-- Hero Section -->
+  <section class="hero-section" aria-labelledby="hero-heading">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 id="hero-heading" class="hero-title">
+          Custom Garage Storage Solutions
+          <span class="subtitle">Organized Garage Cabinets & Shelving</span>
+        </h1>
+        <p class="hero-description">
+          Transform your cluttered garage into an organized, functional space with custom storage solutions that 
+          maximize every inch of available area. I create heavy-duty garage storage systems including cabinets, 
+          workbenches, overhead storage, and specialized organization areas using garage-appropriate materials 
+          and expert craftsmanship. From complete garage transformations to targeted storage solutions, every 
+          system is designed to withstand garage conditions while providing years of reliable organization. 
+          Experience the satisfaction of a perfectly organized garage that serves your family's needs.
+        </p>
+        <div class="hero-actions">
+          <button class="cta-primary" (click)="onGetQuoteClick()" aria-label="Get started for free with custom garage storage solutions">
+            Get Started for Free
+          </button>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="/assets/garage/garage-storage-hero.jpg" 
+             alt="Custom garage storage solutions with organized cabinets and heavy-duty textured melamine finish for maximum organization"
+             loading="eager"
+             width="600"
+             height="400">
+      </div>
+    </div>
+  </section>
+
+  <!-- Introduction Section -->
+  <section class="introduction-section" aria-labelledby="intro-heading">
+    <div class="container">
+      <h2 id="intro-heading">Why Choose My Custom Garage Storage Solutions?</h2>
+      <p class="intro-text">
+        At Deez Cabinuts, I understand that your garage is more than just a place to park your car—it's valuable 
+        storage space, workshop area, and family activity center all rolled into one. That's why I'm personally 
+        dedicated to creating custom garage storage solutions that transform chaotic spaces into organized, 
+        functional areas that work hard for your family. With over a decade of experience in utility storage 
+        design and garage-specific construction, I combine heavy-duty materials with smart organization strategies 
+        to deliver storage systems that truly perform.
+      </p>
+      <p class="intro-text">
+        I work closely with you to understand your storage challenges, family activities, and garage usage patterns. 
+        Whether you need complete garage organization, workshop storage, family activity centers, or utility areas, 
+        I create personalized garage storage solutions that maximize your space while withstanding the unique 
+        demands of garage environments. From temperature fluctuations to heavy use, my storage systems are built 
+        to last and designed to serve your family for years to come.
+      </p>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features-section" aria-labelledby="features-heading">
+    <div class="container">
+      <h2 id="features-heading">What Makes My Garage Storage Solutions Special</h2>
+      <div class="features-grid">
+        <article class="feature-card" *ngFor="let feature of features">
+          <div class="feature-icon" [attr.aria-label]="feature.icon + ' icon'">{{ feature.icon }}</div>
+          <h3 class="feature-title">{{ feature.title }}</h3>
+          <p class="feature-description">{{ feature.description }}</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Garage Solutions Section -->
+  <section class="solutions-section" aria-labelledby="solutions-heading">
+    <div class="container">
+      <h2 id="solutions-heading">Custom Garage Storage Solutions for Every Need</h2>
+      <p class="section-intro">
+        Whether you're looking to organize tools and equipment, create family activity centers, or establish 
+        workshop areas, I have garage storage designs that will transform your space into an organized, 
+        functional area. Each system is tailored to your specific needs, garage layout, and family activities.
+      </p>
+      
+      <div class="solutions-grid">
+        <article class="solution-card" *ngFor="let solution of garageSolutions">
+          <div class="solution-image">
+            <img [src]="solution.imageUrl || '/assets/garage/garage-solution-placeholder.jpg'" 
+                 [alt]="solution.name + ' garage storage solution example'"
+                 loading="lazy"
+                 width="400"
+                 height="300">
+          </div>
+          <div class="solution-content">
+            <h3 class="solution-name">{{ solution.name }}</h3>
+            <p class="solution-description">{{ solution.description }}</p>
+            <ul class="solution-features" aria-label="Features of {{ solution.name }} solution">
+              <li *ngFor="let feature of solution.features">{{ feature }}</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Materials Section -->
+  <section class="materials-section" aria-labelledby="materials-heading">
+    <div class="container">
+      <h2 id="materials-heading">Garage-Tough Materials for Lasting Performance</h2>
+      <p class="section-intro">
+        Your garage storage needs to withstand temperature changes, humidity, heavy use, and the occasional 
+        bump or scrape. That's why I select only materials specifically designed for garage environments, 
+        ensuring your storage systems remain functional and attractive despite the demanding conditions 
+        garages present.
+      </p>
+      
+      <div class="materials-grid">
+        <article class="material-card" *ngFor="let material of materials">
+          <h3 class="material-name">{{ material.name }}</h3>
+          <p class="material-description">{{ material.description }}</p>
+          <ul class="material-benefits" [attr.aria-label]="'Benefits of ' + material.name">
+            <li *ngFor="let benefit of material.benefits">{{ benefit }}</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Design Features Section -->
+  <section class="design-section" aria-labelledby="design-heading">
+    <div class="container">
+      <div class="design-content">
+        <div class="design-text">
+          <h2 id="design-heading">Heavy-Duty Design & Organization Features</h2>
+          <p>
+            Creating effective garage storage requires understanding the unique challenges of garage 
+            environments and family storage needs. I incorporate advanced design features that not only 
+            maximize storage capacity but also ensure easy access, durability, and adaptability to your 
+            changing storage requirements over time.
+          </p>
+          <ul class="design-list" aria-label="Available design features">
+            <li *ngFor="let feature of designFeatures">{{ feature }}</li>
+          </ul>
+        </div>
+        <div class="design-image">
+          <img src="/assets/garage/garage-design-features.jpg" 
+               alt="Detailed view of garage storage design features including heavy-duty shelving, tool organization, and workbench integration"
+               loading="lazy"
+               width="500"
+               height="400">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Finishes Section -->
+  <section class="finishes-section" aria-labelledby="finishes-heading">
+    <div class="container">
+      <h2 id="finishes-heading">Durable Finishes for Garage Environments</h2>
+      <p class="section-intro">
+        Create a garage that's both functional and attractive with my garage-appropriate finish collection. 
+        These durable surfaces are specifically designed to withstand garage conditions while maintaining 
+        their appearance—ideal for storage systems that need to look good while handling the demands of 
+        daily family use and garage activities.
+      </p>
+      
+      <div class="finishes-showcase">
+        <div class="finish-samples">
+          <img src="/assets/garage/garage-finish-samples.jpg" 
+               alt="Collection of durable finish samples perfect for custom garage storage and organization systems"
+               loading="lazy"
+               width="600"
+               height="400">
+        </div>
+        <div class="finishes-list">
+          <h3>Garage-Tough Finish Options:</h3>
+          <ul aria-label="Garage storage finish options">
+            <li *ngFor="let finish of finishOptions">{{ finish }}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section class="process-section" aria-labelledby="process-heading">
+    <div class="container">
+      <h2 id="process-heading">My Custom Garage Storage Process</h2>
+      <p class="section-intro">
+        From initial garage assessment to final organization setup, my systematic process ensures your garage 
+        transformation maximizes storage potential and exceeds your organizational goals. Here's what you can 
+        expect when you choose Deez Cabinuts for your garage storage transformation.
+      </p>
+      
+      <div class="process-steps">
+        <article class="process-step" *ngFor="let step of processSteps">
+          <div class="step-number">{{ step.step }}</div>
+          <div class="step-content">
+            <h3 class="step-title">{{ step.title }}</h3>
+            <p class="step-description">{{ step.description }}</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="benefits-section" aria-labelledby="benefits-heading">
+    <div class="container">
+      <h2 id="benefits-heading">Benefits of Custom Garage Storage Solutions</h2>
+      <div class="benefits-grid">
+        <div class="benefits-text">
+          <p>
+            Investing in custom garage storage solutions transforms not just your garage space, but your entire 
+            approach to home organization and family activities. When you choose a custom garage solution from 
+            Deez Cabinuts, you're investing in a system that grows with your family's needs, protects your 
+            valuable items, and creates the organized foundation that makes daily life more efficient and enjoyable.
+          </p>
+          <ul class="benefits-list" aria-label="Benefits of custom garage storage solutions">
+            <li *ngFor="let benefit of benefits">{{ benefit }}</li>
+          </ul>
+        </div>
+        <div class="benefits-image">
+          <img src="/assets/garage/garage-benefits.jpg" 
+               alt="Custom garage storage solution installation showing organized transformation and family-friendly accessibility"
+               loading="lazy"
+               width="500"
+               height="400">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section" aria-labelledby="faq-heading">
+    <div class="container">
+      <h2 id="faq-heading">Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <article class="faq-item" *ngFor="let faq of faqs">
+          <h3 class="faq-question">{{ faq.question }}</h3>
+          <p class="faq-answer">{{ faq.answer }}</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section" aria-labelledby="cta-heading">
+    <div class="container">
+      <div class="cta-content">
+        <h2 id="cta-heading">Ready to Transform Your Garage?</h2>
+        <p class="cta-text">
+          Don't let a cluttered garage limit your family's potential. Get started with Deez Cabinuts today 
+          for a free consultation. I'm ready to help you design and build the custom garage storage solutions 
+          that will organize your space, protect your belongings, and create the functional garage environment 
+          your family deserves—built to last and designed to serve you for years to come.
+        </p>
+        <div class="cta-actions">
+          <button class="cta-primary large" (click)="onGetQuoteClick()" aria-label="Get started for free with custom garage storage solutions">
+            Get Started for Free
+          </button>
+        </div>
+        <p class="cta-guarantee">
+          <strong>100% Satisfaction Guarantee</strong> - I'm not happy until you're completely satisfied with your organized garage transformation.
+        </p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- Structured Data for SEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Custom Garage Storage Solutions",
+  "description": "Premium custom garage storage design and installation services. Transform your garage with organized cabinets, shelving, and workbench solutions featuring durable textured melamine and heavy-duty construction for maximum organization.",
+  "provider": {
+    "@type": "Organization",
+    "name": "Deez Cabinuts",
+    "url": "https://deezcabnuts.com"
+  },
+  "areaServed": {
+    "@type": "Place",
+    "name": "Local Service Area"
+  },
+  "serviceType": "Custom Garage Storage Installation",
+  "offers": {
+    "@type": "Offer",
+    "description": "Free consultation and quote for custom garage storage solutions"
+  }
+}
+</script>

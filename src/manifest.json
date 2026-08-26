@@ -1,0 +1,73 @@
+{
+  "name": "DeezCabinuts - Custom Cabinetry",
+  "short_name": "DeezCabinuts",
+  "description": "Custom cabinetry solutions in Cedar City, UT. Kitchen cabinets, bathroom vanities, custom closets, and office furniture.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#8B4513",
+  "orientation": "portrait-primary",
+  "categories": ["business", "home", "lifestyle"],
+  "lang": "en-US",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "assets/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "assets/hero.jpg",
+      "sizes": "1280x720",
+      "type": "image/jpeg",
+      "platform": "wide",
+      "label": "DeezCabinuts Homepage"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Services",
+      "short_name": "Services",
+      "description": "View our cabinetry services",
+      "url": "/services",
+      "icons": [
+        {
+          "src": "assets/logo.svg",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Service Areas",
+      "short_name": "Areas",
+      "description": "View our service areas",
+      "url": "/service-areas",
+      "icons": [
+        {
+          "src": "assets/logo.svg",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Get Started",
+      "short_name": "Quote",
+      "description": "Get a free quote",
+      "url": "/get-started",
+      "icons": [
+        {
+          "src": "assets/logo.svg",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ]
+}

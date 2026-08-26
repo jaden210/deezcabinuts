@@ -1,0 +1,273 @@
+<!-- Kitchen Cabinets Page - SEO Optimized -->
+<main class="kitchen-cabinets-page" role="main">
+  
+  <!-- Hero Section -->
+  <section class="hero-section" aria-labelledby="hero-heading">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 id="hero-heading" class="hero-title">
+          Custom Kitchen Cabinets
+          <span class="subtitle">Transform Your Kitchen with Premium Cabinetry</span>
+        </h1>
+        <p class="hero-description">
+          Discover the perfect blend of functionality and style with our custom kitchen cabinets. 
+          From traditional elegance to modern minimalism, we create bespoke cabinetry solutions 
+          that reflect your unique taste and maximize your kitchen's potential.
+        </p>
+        <div class="hero-actions">
+          <button class="cta-primary" (click)="onGetQuoteClick()" aria-label="Get started for free with kitchen cabinets">
+            Get Started for Free
+          </button>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="/assets/kitchen/complete.jpg" 
+             alt="Beautiful custom kitchen cabinets showcasing modern design and premium craftsmanship"
+             loading="eager"
+             width="600"
+             height="400">
+      </div>
+    </div>
+  </section>
+
+  <!-- Introduction Section -->
+  <section class="introduction-section" aria-labelledby="intro-heading">
+    <div class="container">
+      <h2 id="intro-heading">Why Choose My Custom Kitchen Cabinets?</h2>
+      <p class="intro-text">
+        At Deez Cabinuts, I understand that your kitchen is the heart of your home. That's why I'm personally 
+        dedicated to creating custom kitchen cabinets that not only meet your storage needs but also enhance the beauty 
+        and functionality of your space. With over a decade of experience in custom cabinetry, I combine 
+        traditional craftsmanship with modern design principles to deliver exceptional results.
+      </p>
+      <p class="intro-text">
+        I work closely with you from start to finish to create cabinetry solutions that 
+        reflect your personal style, accommodate your lifestyle, and fit perfectly within your budget. From 
+        the initial consultation to the final installation, I personally ensure every detail meets my high standards 
+        of quality and your complete satisfaction.
+      </p>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features-section" aria-labelledby="features-heading">
+    <div class="container">
+      <h2 id="features-heading">What Makes Our Kitchen Cabinets Special</h2>
+      <div class="features-grid">
+        <article class="feature-card" *ngFor="let feature of features">
+          <div class="feature-icon" [attr.aria-label]="feature.icon + ' icon'">{{ feature.icon }}</div>
+          <h3 class="feature-title">{{ feature.title }}</h3>
+          <p class="feature-description">{{ feature.description }}</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cabinet Styles Section -->
+  <section class="styles-section" aria-labelledby="styles-heading">
+    <div class="container">
+      <h2 id="styles-heading">Kitchen Cabinet Styles & Designs</h2>
+      <p class="section-intro">
+        Choose from our comprehensive collection of cabinet styles, each carefully crafted to complement 
+        different design aesthetics. Whether you prefer timeless traditional designs or sleek contemporary 
+        looks, we have the perfect style for your kitchen.
+      </p>
+      
+      <div class="styles-grid">
+        <article class="style-card" *ngFor="let style of cabinetStyles">
+          <div class="style-content">
+            <h3 class="style-name">{{ style.name }}</h3>
+            <p class="style-description">{{ style.description }}</p>
+            <ul class="style-features" aria-label="Features of {{ style.name }} style">
+              <li *ngFor="let feature of style.features">{{ feature }}</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Materials Section -->
+  <section class="materials-section" aria-labelledby="materials-heading">
+    <div class="container">
+      <h2 id="materials-heading">Premium Materials & Construction</h2>
+      <p class="section-intro">
+        We believe that quality starts with the materials. That's why we source only the finest hardwoods, 
+        engineered materials, and hardware components to ensure your kitchen cabinets not only look beautiful 
+        but also stand the test of time.
+      </p>
+      
+      <div class="materials-grid">
+        <article class="material-card" *ngFor="let material of materials">
+          <h3 class="material-name">{{ material.name }}</h3>
+          <p class="material-description">{{ material.description }}</p>
+          <ul class="material-benefits" [attr.aria-label]="'Benefits of ' + material.name">
+            <li *ngFor="let benefit of material.benefits">{{ benefit }}</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hardware & Features Section -->
+  <section class="hardware-section" aria-labelledby="hardware-heading">
+    <div class="container">
+      <div class="hardware-content">
+        <div class="hardware-text">
+          <h2 id="hardware-heading">Premium Hardware & Innovative Features</h2>
+          <p>
+            The devil is in the details, and our hardware selection reflects our commitment to quality and 
+            functionality. Every cabinet comes equipped with premium hardware that ensures smooth operation, 
+            long-lasting performance, and the ultimate user experience.
+          </p>
+          <ul class="hardware-list" aria-label="Available hardware options">
+            <li *ngFor="let option of hardwareOptions">{{ option }}</li>
+          </ul>
+        </div>
+        <div class="hardware-image">
+          <img src="/assets/kitchen/hood.jpg" 
+               alt="Close-up view of premium cabinet hardware and soft-close mechanisms"
+               loading="lazy"
+               width="500"
+               height="400">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Finishes Section -->
+  <section class="finishes-section" aria-labelledby="finishes-heading">
+    <div class="container">
+      <h2 id="finishes-heading">Modern Textured Melamine Finishes</h2>
+      <p class="section-intro">
+        Discover the latest in contemporary cabinet finishes with our premium textured melamine collection. 
+        These cutting-edge surfaces offer the beauty of natural materials with superior durability and easy maintenance. 
+        Textured melamine is the modern choice for today's stylish kitchens, providing stunning visual appeal 
+        with practical benefits that traditional finishes can't match.
+      </p>
+      
+      <div class="finishes-showcase">
+        <div class="finish-samples">
+          <img src="/assets/kitchen/uppers.jpg" 
+               alt="Collection of textured melamine cabinet finish samples showing modern wood grain, stone, and fabric textures"
+               loading="lazy"
+               width="600"
+               height="400">
+        </div>
+        <div class="finishes-list">
+          <h3>Textured Melamine Options:</h3>
+          <ul aria-label="Cabinet finish options">
+            <li *ngFor="let finish of finishOptions">{{ finish }}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section class="process-section" aria-labelledby="process-heading">
+    <div class="container">
+      <h2 id="process-heading">Our Kitchen Cabinet Process</h2>
+      <p class="section-intro">
+        From concept to completion, our streamlined process ensures your kitchen cabinet project is completed 
+        efficiently and to your complete satisfaction. Here's what you can expect when you choose Deez Cabinuts 
+        for your kitchen renovation.
+      </p>
+      
+      <div class="process-steps">
+        <article class="process-step" *ngFor="let step of processSteps">
+          <div class="step-number">{{ step.step }}</div>
+          <div class="step-content">
+            <h3 class="step-title">{{ step.title }}</h3>
+            <p class="step-description">{{ step.description }}</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="benefits-section" aria-labelledby="benefits-heading">
+    <div class="container">
+      <h2 id="benefits-heading">Benefits of Choosing Custom Kitchen Cabinets</h2>
+      <div class="benefits-grid">
+        <div class="benefits-text">
+          <p>
+            Investing in custom kitchen cabinets offers numerous advantages over stock or semi-custom options. 
+            When you choose custom cabinetry from Deez Cabinuts, you're investing in a solution that's 
+            tailored specifically to your needs, space, and lifestyle.
+          </p>
+          <ul class="benefits-list" aria-label="Benefits of custom kitchen cabinets">
+            <li *ngFor="let benefit of benefits">{{ benefit }}</li>
+          </ul>
+        </div>
+        <div class="benefits-image">
+          <img src="/assets/kitchen/complete2.jpg" 
+               alt="Custom kitchen cabinet installation showing perfect fit and premium finish"
+               loading="lazy"
+               width="500"
+               height="400">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section" aria-labelledby="faq-heading">
+    <div class="container">
+      <h2 id="faq-heading">Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <article class="faq-item" *ngFor="let faq of faqs">
+          <h3 class="faq-question">{{ faq.question }}</h3>
+          <p class="faq-answer">{{ faq.answer }}</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section" aria-labelledby="cta-heading">
+    <div class="container">
+      <div class="cta-content">
+        <h2 id="cta-heading">Ready to Transform Your Kitchen?</h2>
+        <p class="cta-text">
+          Don't wait to create the kitchen of your dreams. Get started with Deez Cabinuts today for a free consultation. 
+          Our team is ready to help you design and build the perfect custom kitchen cabinets for your home.
+        </p>
+        <div class="cta-actions">
+          <button class="cta-primary large" (click)="onGetQuoteClick()" aria-label="Get started for free with kitchen cabinets">
+            Get Started for Free
+          </button>
+        </div>
+        <p class="cta-guarantee">
+          <strong>100% Satisfaction Guarantee</strong> - We're not happy until you're completely satisfied with your new kitchen cabinets.
+        </p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- Structured Data for SEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Custom Kitchen Cabinets",
+  "description": "Premium custom kitchen cabinet design and installation services. Transform your kitchen with bespoke cabinetry solutions that reflect your unique style and maximize functionality.",
+  "provider": {
+    "@type": "Organization",
+    "name": "Deez Cabinuts",
+    "url": "https://deezcabnuts.com"
+  },
+  "areaServed": {
+    "@type": "Place",
+    "name": "Local Service Area"
+  },
+  "serviceType": "Custom Kitchen Cabinet Installation",
+  "offers": {
+    "@type": "Offer",
+    "description": "Free consultation and quote for custom kitchen cabinets"
+  }
+}
+</script>

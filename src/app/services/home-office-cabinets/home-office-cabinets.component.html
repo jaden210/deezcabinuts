@@ -1,0 +1,286 @@
+<!-- Home Office Cabinets Page - SEO Optimized -->
+<main class="home-office-cabinets-page" role="main">
+  
+  <!-- Hero Section -->
+  <section class="hero-section" aria-labelledby="hero-heading">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 id="hero-heading" class="hero-title">
+          Custom Home Office Cabinets
+          <span class="subtitle">Built-In Desk & Storage Solutions</span>
+        </h1>
+        <p class="hero-description">
+          Transform your workspace into a productivity powerhouse with custom home office cabinets that combine 
+          professional functionality with sophisticated design. I create integrated desk solutions, smart storage 
+          systems, and organized workspaces using premium materials and expert craftsmanship. From executive 
+          home office suites to compact workspace solutions, every system is designed to enhance your productivity 
+          while seamlessly integrating with your home's aesthetic. Experience the perfect balance of professional 
+          functionality and residential comfort in your personalized home office sanctuary.
+        </p>
+        <div class="hero-actions">
+          <button class="cta-primary" (click)="onGetQuoteClick()" aria-label="Get started for free with custom home office cabinets">
+            Get Started for Free
+          </button>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="/assets/home-office/desk.jpg" 
+             alt="Custom home office cabinets with built-in desk and sophisticated textured melamine finish for productivity and professional appearance"
+             loading="eager"
+             width="600"
+             height="400">
+      </div>
+    </div>
+  </section>
+
+  <!-- Introduction Section -->
+  <section class="introduction-section" aria-labelledby="intro-heading">
+    <div class="container">
+      <h2 id="intro-heading">Why Choose My Custom Home Office Cabinets?</h2>
+      <p class="intro-text">
+        At Deez Cabinuts, I understand that your home office is where productivity meets comfort, where professional 
+        demands merge with personal style. That's why I'm personally dedicated to creating custom home office cabinet 
+        systems that enhance your workflow while creating an inspiring environment for your best work. With over a 
+        decade of experience in functional design and workspace optimization, I combine ergonomic principles with 
+        sophisticated aesthetics to deliver office solutions that truly work.
+      </p>
+      <p class="intro-text">
+        I work closely with you to understand your work requirements, technology needs, and space constraints. Whether 
+        you need an executive suite for running your business, a compact corner office for remote work, or a creative 
+        studio for your artistic pursuits, I create personalized office cabinet solutions that support your success 
+        while maintaining the comfort and beauty of your home environment.
+      </p>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features-section" aria-labelledby="features-heading">
+    <div class="container">
+      <h2 id="features-heading">What Makes My Home Office Cabinets Special</h2>
+      <div class="features-grid">
+        <article class="feature-card" *ngFor="let feature of features">
+          <div class="feature-icon" [attr.aria-label]="feature.icon + ' icon'">{{ feature.icon }}</div>
+          <h3 class="feature-title">{{ feature.title }}</h3>
+          <p class="feature-description">{{ feature.description }}</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Office Solutions Section -->
+  <section class="solutions-section" aria-labelledby="solutions-heading">
+    <div class="container">
+      <h2 id="solutions-heading">Custom Home Office Solutions for Every Professional</h2>
+      <p class="section-intro">
+        Whether you're running a business from home, working remotely for a company, or pursuing creative endeavors, 
+        I have home office cabinet designs that will transform your workspace into a productivity haven. Each system 
+        is tailored to your specific work style, technology needs, and space requirements.
+      </p>
+      
+      <div class="solutions-grid">
+        <article class="solution-card" *ngFor="let solution of officeSolutions">
+          <div class="solution-image">
+            <img [src]="solution.imageUrl || '/assets/home-office/office-solution-placeholder.jpg'" 
+                 [alt]="solution.name + ' home office cabinet solution example'"
+                 loading="lazy"
+                 width="400"
+                 height="300">
+          </div>
+          <div class="solution-content">
+            <h3 class="solution-name">{{ solution.name }}</h3>
+            <p class="solution-description">{{ solution.description }}</p>
+            <ul class="solution-features" aria-label="Features of {{ solution.name }} solution">
+              <li *ngFor="let feature of solution.features">{{ feature }}</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Materials Section -->
+  <section class="materials-section" aria-labelledby="materials-heading">
+    <div class="container">
+      <h2 id="materials-heading">Professional Materials for Productive Workspaces</h2>
+      <p class="section-intro">
+        Your home office cabinets need to withstand daily use while maintaining a professional appearance that 
+        inspires confidence in both you and your clients. That's why I select only premium materials that combine 
+        durability with sophisticated aesthetics, ensuring your workspace remains beautiful and functional for years to come.
+      </p>
+      
+      <div class="materials-grid">
+        <article class="material-card" *ngFor="let material of materials">
+          <h3 class="material-name">{{ material.name }}</h3>
+          <p class="material-description">{{ material.description }}</p>
+          <ul class="material-benefits" [attr.aria-label]="'Benefits of ' + material.name">
+            <li *ngFor="let benefit of material.benefits">{{ benefit }}</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Design Features Section -->
+  <section class="design-section" aria-labelledby="design-heading">
+    <div class="container">
+      <div class="design-content">
+        <div class="design-text">
+          <h2 id="design-heading">Advanced Design & Productivity Features</h2>
+          <p>
+            Creating the perfect home office requires careful consideration of workflow, ergonomics, and technology 
+            integration. I incorporate advanced design features that not only optimize your productivity but also 
+            create a professional environment that supports your success and well-being throughout your workday.
+          </p>
+          <ul class="design-list" aria-label="Available design features">
+            <li *ngFor="let feature of designFeatures">{{ feature }}</li>
+          </ul>
+        </div>
+        <div class="design-image">
+          <img src="/assets/home-office/desk2.jpg" 
+               alt="Detailed view of home office cabinet design features including integrated desk, filing systems, and cable management"
+               loading="lazy"
+               width="500"
+               height="400">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Finishes Section -->
+  <section class="finishes-section" aria-labelledby="finishes-heading">
+    <div class="container">
+      <h2 id="finishes-heading">Professional Finishes for Modern Home Offices</h2>
+      <p class="section-intro">
+        Create the perfect professional atmosphere with my premium finish collection. These sophisticated surfaces 
+        offer the beauty of natural materials with the practical benefits of easy maintenance—ideal for home offices 
+        that need to look pristine while handling the demands of daily professional use.
+      </p>
+      
+      <div class="finishes-showcase">
+        <div class="finish-samples">
+          <img src="/assets/home-office/desk.jpg" 
+               alt="Collection of professional finish samples perfect for custom home office cabinets and workspace design"
+               loading="lazy"
+               width="600"
+               height="400">
+        </div>
+        <div class="finishes-list">
+          <h3>Professional Finish Options:</h3>
+          <ul aria-label="Home office cabinet finish options">
+            <li *ngFor="let finish of finishOptions">{{ finish }}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section class="process-section" aria-labelledby="process-heading">
+    <div class="container">
+      <h2 id="process-heading">My Custom Home Office Cabinet Process</h2>
+      <p class="section-intro">
+        From initial workspace assessment to final organization setup, my comprehensive process ensures your home 
+        office project enhances your productivity and exceeds your expectations. Here's what you can expect when 
+        you choose Deez Cabinuts for your workspace transformation.
+      </p>
+      
+      <div class="process-steps">
+        <article class="process-step" *ngFor="let step of processSteps">
+          <div class="step-number">{{ step.step }}</div>
+          <div class="step-content">
+            <h3 class="step-title">{{ step.title }}</h3>
+            <p class="step-description">{{ step.description }}</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="benefits-section" aria-labelledby="benefits-heading">
+    <div class="container">
+      <h2 id="benefits-heading">Benefits of Custom Home Office Cabinets</h2>
+      <div class="benefits-grid">
+        <div class="benefits-text">
+          <p>
+            Investing in custom home office cabinets transforms not just your workspace, but your entire approach 
+            to productivity and professional success. When you choose a custom office solution from Deez Cabinuts, 
+            you're investing in a workspace that adapts to your needs, enhances your efficiency, and supports your 
+            career growth while maintaining the comfort and beauty of your home.
+          </p>
+          <ul class="benefits-list" aria-label="Benefits of custom home office cabinets">
+            <li *ngFor="let benefit of benefits">{{ benefit }}</li>
+          </ul>
+        </div>
+        <div class="benefits-image">
+          <img src="/assets/home-office/desk2.jpg" 
+               alt="Custom home office cabinet installation showing professional workspace transformation and productivity enhancement"
+               loading="lazy"
+               width="500"
+               height="400">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section" aria-labelledby="faq-heading">
+    <div class="container">
+      <h2 id="faq-heading">Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <article class="faq-item" *ngFor="let faq of faqs">
+          <h3 class="faq-question">{{ faq.question }}</h3>
+          <p class="faq-answer">{{ faq.answer }}</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section" aria-labelledby="cta-heading">
+    <div class="container">
+      <div class="cta-content">
+        <h2 id="cta-heading">Ready to Transform Your Home Office?</h2>
+        <p class="cta-text">
+          Don't let an inefficient workspace hold back your professional success. Get started with Deez Cabinuts 
+          today for a free consultation. I'm ready to help you design and build the custom home office cabinets 
+          that will enhance your productivity, support your career goals, and create the professional environment 
+          you deserve—right in the comfort of your home.
+        </p>
+        <div class="cta-actions">
+          <button class="cta-primary large" (click)="onGetQuoteClick()" aria-label="Get started for free with custom home office cabinets">
+            Get Started for Free
+          </button>
+        </div>
+        <p class="cta-guarantee">
+          <strong>100% Satisfaction Guarantee</strong> - I'm not happy until you're completely satisfied with your productive home office transformation.
+        </p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- Structured Data for SEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Custom Home Office Cabinets",
+  "description": "Premium custom home office cabinet design and installation services. Transform your workspace with built-in desks, filing systems, and storage solutions featuring sophisticated textured melamine and hardwood finishes for enhanced productivity.",
+  "provider": {
+    "@type": "Organization",
+    "name": "Deez Cabinuts",
+    "url": "https://deezcabnuts.com"
+  },
+  "areaServed": {
+    "@type": "Place",
+    "name": "Local Service Area"
+  },
+  "serviceType": "Custom Home Office Cabinet Installation",
+  "offers": {
+    "@type": "Offer",
+    "description": "Free consultation and quote for custom home office cabinets"
+  }
+}
+</script>

@@ -1,0 +1,42 @@
+<!-- Hero Section -->
+<div class="service-areas-container">
+  <div class="service-areas-header">
+    <h1>Our Service Areas</h1>
+    <p>We proudly serve communities throughout Iron County and Washington County with custom cabinetry solutions. Click on any location to learn more about our services in your area.</p>
+  </div>
+
+  <div class="service-areas-content">
+    
+    <div class="county-section" *ngFor="let area of serviceAreas">
+      <div class="county-header">
+        <h3>{{ area.county }}</h3>
+        <div class="county-divider"></div>
+      </div>
+      
+      <div class="locations-grid">
+        <div class="location-card fade-in-up" *ngFor="let location of area.locations">
+          <div class="location-header">
+            <h4>{{ location.name }}</h4>
+          </div>
+
+          <div class="location-actions">
+            <a [href]="'/locations/' + location.name.toLowerCase().replace(' ', '-').replace('.', '')" class="location-link">
+              Learn More →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA Section -->
+<section class="cta py-5">
+  <div class="container text-center">
+    <h2 class="fade-in-up">Ready to Get Started?</h2>
+    <p class="fade-in-up">No matter where you are in Southern Utah, we're here to help transform your space with custom cabinetry solutions.</p>
+    <div class="cta-buttons fade-in-up">
+      <a href="/get-started" class="btn btn-primary btn-large">Get Started for Free</a>
+    </div>
+  </div>
+</section>

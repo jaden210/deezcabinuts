@@ -1,0 +1,298 @@
+<!-- Home Renovation Cabinet Services Page - SEO Optimized -->
+<main class="home-renovation-cabinet-services-page" role="main">
+  
+  <!-- Hero Section -->
+  <section class="hero-section" aria-labelledby="hero-heading">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 id="hero-heading" class="hero-title">
+          Home Renovation Cabinet Services
+          <span class="subtitle">Kitchen & Bathroom Remodel Cabinets</span>
+        </h1>
+        <p class="hero-description">
+          Transform your existing home into the space you've always dreamed of with comprehensive renovation 
+          cabinet services that maximize your investment while minimizing disruption to your daily life. I 
+          specialize in kitchen remodels, bathroom updates, and whole-home transformations using expert 
+          renovation coordination and premium materials. From optimizing existing layouts to complete space 
+          transformations, every renovation project is designed to enhance your home's functionality, beauty, 
+          and value. Experience the satisfaction of living in a beautifully renovated home that perfectly 
+          serves your family's evolving needs while respecting your home's character and your budget.
+        </p>
+        <div class="hero-actions">
+          <button class="cta-primary" (click)="onGetQuoteClick()" aria-label="Get started for free with home renovation cabinet services">
+            Get Started for Free
+          </button>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="/assets/renovation/fire.jpg" 
+             alt="Home renovation cabinet services with dramatic kitchen transformation and beautiful textured melamine finish for complete home updates"
+             loading="eager"
+             width="600"
+             height="400">
+      </div>
+    </div>
+  </section>
+
+  <!-- Introduction Section -->
+  <section class="introduction-section" aria-labelledby="intro-heading">
+    <div class="container">
+      <h2 id="intro-heading">Why Choose My Home Renovation Cabinet Services?</h2>
+      <p class="intro-text">
+        At Deez Cabinuts, I understand that home renovation is about more than just updating your space—it's 
+        about creating a home that truly serves your family's lifestyle while maximizing your investment. 
+        That's why I'm personally dedicated to providing comprehensive renovation cabinet services that transform 
+        existing spaces into functional, beautiful areas that enhance your daily living. With over a decade of 
+        experience in renovation coordination and space optimization, I combine renovation expertise with custom 
+        craftsmanship to deliver transformations that exceed expectations while respecting budgets and timelines.
+      </p>
+      <p class="intro-text">
+        I work closely with homeowners, general contractors, and other trades to understand renovation goals, 
+        existing constraints, and family needs. Whether you need complete kitchen renovations, bathroom updates, 
+        whole-home cabinet transformations, or specialty space renovations, I create personalized renovation 
+        solutions that optimize existing spaces while dramatically improving functionality and aesthetics. From 
+        initial assessment to final installation, my renovation-focused approach ensures your cabinet project 
+        integrates seamlessly with your overall renovation while delivering lasting value and satisfaction.
+      </p>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features-section" aria-labelledby="features-heading">
+    <div class="container">
+      <h2 id="features-heading">What Makes My Renovation Cabinet Services Special</h2>
+      <div class="features-grid">
+        <article class="feature-card" *ngFor="let feature of features">
+          <div class="feature-icon" [attr.aria-label]="feature.icon + ' icon'">{{ feature.icon }}</div>
+          <h3 class="feature-title">{{ feature.title }}</h3>
+          <p class="feature-description">{{ feature.description }}</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Renovation Solutions Section -->
+  <section class="solutions-section" aria-labelledby="solutions-heading">
+    <div class="container">
+      <h2 id="solutions-heading">Custom Renovation Solutions for Every Project</h2>
+      <p class="section-intro">
+        Whether you're planning a complete kitchen transformation, updating bathrooms throughout your home, 
+        or undertaking a whole-home renovation project, I have renovation cabinet solutions that will maximize 
+        your investment and transform your living spaces. Each solution is tailored to specific renovation 
+        needs, existing constraints, and transformation goals.
+      </p>
+      
+      <div class="solutions-grid">
+        <article class="solution-card" *ngFor="let solution of renovationSolutions">
+          <div class="solution-image">
+            <img [src]="solution.imageUrl || '/assets/renovation/renovation-solution-placeholder.jpg'" 
+                 [alt]="solution.name + ' home renovation cabinet solution example'"
+                 loading="lazy"
+                 width="400"
+                 height="300">
+          </div>
+          <div class="solution-content">
+            <h3 class="solution-name">{{ solution.name }}</h3>
+            <p class="solution-description">{{ solution.description }}</p>
+            <ul class="solution-features" aria-label="Features of {{ solution.name }} solution">
+              <li *ngFor="let feature of solution.features">{{ feature }}</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Materials Section -->
+  <section class="materials-section" aria-labelledby="materials-heading">
+    <div class="container">
+      <h2 id="materials-heading">Renovation-Quality Materials for Lasting Transformation</h2>
+      <p class="section-intro">
+        Your renovation cabinets need to provide dramatic transformation while offering the durability and 
+        quality that justify your renovation investment. That's why I select only premium materials specifically 
+        chosen for renovation projects, ensuring your new cabinets provide lasting beauty, functionality, and 
+        value that enhances your home for decades to come.
+      </p>
+      
+      <div class="materials-grid">
+        <article class="material-card" *ngFor="let material of materials">
+          <h3 class="material-name">{{ material.name }}</h3>
+          <p class="material-description">{{ material.description }}</p>
+          <ul class="material-benefits" [attr.aria-label]="'Benefits of ' + material.name">
+            <li *ngFor="let benefit of material.benefits">{{ benefit }}</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Design Features Section -->
+  <section class="design-section" aria-labelledby="design-heading">
+    <div class="container">
+      <div class="design-content">
+        <div class="design-text">
+          <h2 id="design-heading">Renovation-Focused Design & Coordination Features</h2>
+          <p>
+            Creating successful renovation cabinet projects requires understanding existing home systems, 
+            renovation challenges, and integration requirements. I incorporate specialized design and 
+            coordination features that not only ensure seamless renovation integration but also maximize 
+            the transformation potential within the unique opportunities and constraints that renovation 
+            projects provide.
+          </p>
+          <ul class="design-list" aria-label="Available design features">
+            <li *ngFor="let feature of designFeatures">{{ feature }}</li>
+          </ul>
+        </div>
+        <div class="design-image">
+          <img src="/assets/renovation/box.jpg" 
+               alt="Detailed view of home renovation cabinet design features including space optimization and renovation coordination"
+               loading="lazy"
+               width="500"
+               height="400">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Finishes Section -->
+  <section class="finishes-section" aria-labelledby="finishes-heading">
+    <div class="container">
+      <h2 id="finishes-heading">Updated Finishes for Modern Home Renovations</h2>
+      <p class="section-intro">
+        Create the dramatic transformation you're looking for with my renovation-focused finish collection. 
+        These sophisticated surfaces are specifically designed to modernize existing homes while providing 
+        the durability and performance renovated spaces need—ideal for renovation cabinet projects that 
+        need to deliver maximum visual impact while handling the demands of updated, active family living.
+      </p>
+      
+      <div class="finishes-showcase">
+        <div class="finish-samples">
+          <img src="/assets/renovation/fire.jpg" 
+               alt="Collection of updated finish samples perfect for home renovation cabinet projects and modern transformation"
+               loading="lazy"
+               width="600"
+               height="400">
+        </div>
+        <div class="finishes-list">
+          <h3>Renovation-Perfect Finish Options:</h3>
+          <ul aria-label="Home renovation cabinet finish options">
+            <li *ngFor="let finish of finishOptions">{{ finish }}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section class="process-section" aria-labelledby="process-heading">
+    <div class="container">
+      <h2 id="process-heading">My Home Renovation Cabinet Process</h2>
+      <p class="section-intro">
+        From initial renovation assessment to final quality completion, my renovation-focused process ensures 
+        your cabinet project integrates seamlessly with your overall renovation timeline and exceeds your 
+        transformation expectations. Here's what you can expect when you choose Deez Cabinuts for your 
+        home renovation cabinet services.
+      </p>
+      
+      <div class="process-steps">
+        <article class="process-step" *ngFor="let step of processSteps">
+          <div class="step-number">{{ step.step }}</div>
+          <div class="step-content">
+            <h3 class="step-title">{{ step.title }}</h3>
+            <p class="step-description">{{ step.description }}</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="benefits-section" aria-labelledby="benefits-heading">
+    <div class="container">
+      <h2 id="benefits-heading">Benefits of Home Renovation Cabinet Services</h2>
+      <div class="benefits-grid">
+        <div class="benefits-text">
+          <p>
+            Investing in professional home renovation cabinet services transforms not just your individual 
+            rooms, but your entire home living experience. When you choose renovation cabinet services from 
+            Deez Cabinuts, you're investing in a comprehensive transformation that maximizes your renovation 
+            investment, coordinates seamlessly with other trades, and delivers the lasting quality and beauty 
+            that makes your renovation worthwhile for years to come.
+          </p>
+          <ul class="benefits-list" aria-label="Benefits of home renovation cabinet services">
+            <li *ngFor="let benefit of benefits">{{ benefit }}</li>
+          </ul>
+        </div>
+        <div class="benefits-image">
+          <img src="/assets/renovation/box.jpg" 
+               alt="Home renovation cabinet services installation showing dramatic transformation and coordinated renovation results"
+               loading="lazy"
+               width="500"
+               height="400">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section" aria-labelledby="faq-heading">
+    <div class="container">
+      <h2 id="faq-heading">Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <article class="faq-item" *ngFor="let faq of faqs">
+          <h3 class="faq-question">{{ faq.question }}</h3>
+          <p class="faq-answer">{{ faq.answer }}</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section" aria-labelledby="cta-heading">
+    <div class="container">
+      <div class="cta-content">
+        <h2 id="cta-heading">Ready to Transform Your Home?</h2>
+        <p class="cta-text">
+          Don't let outdated cabinets hold back your home's potential. Get started with Deez Cabinuts today 
+          for a free consultation. I'm ready to help you design and build the custom renovation cabinets 
+          that will transform your existing spaces, coordinate perfectly with your renovation timeline, and 
+          create the beautiful, functional home you've always wanted—maximizing your investment while 
+          minimizing disruption to your daily life.
+        </p>
+        <div class="cta-actions">
+          <button class="cta-primary large" (click)="onGetQuoteClick()" aria-label="Get started for free with home renovation cabinet services">
+            Get Started for Free
+          </button>
+        </div>
+        <p class="cta-guarantee">
+          <strong>100% Satisfaction Guarantee</strong> - I'm not happy until you're completely satisfied with your home renovation transformation.
+        </p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- Structured Data for SEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Home Renovation Cabinet Services",
+  "description": "Comprehensive home renovation cabinet design and installation services. Transform kitchens, bathrooms, and entire homes with coordinated renovation solutions featuring premium textured melamine and hardwood finishes for maximum value.",
+  "provider": {
+    "@type": "Organization",
+    "name": "Deez Cabinuts",
+    "url": "https://deezcabnuts.com"
+  },
+  "areaServed": {
+    "@type": "Place",
+    "name": "Local Service Area"
+  },
+  "serviceType": "Home Renovation Cabinet Installation",
+  "offers": {
+    "@type": "Offer",
+    "description": "Free consultation and quote for home renovation cabinet services"
+  }
+}
+</script>

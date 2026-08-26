@@ -1,0 +1,279 @@
+<!-- Floating Shelves Page - SEO Optimized -->
+<main class="floating-shelves-page" role="main">
+  
+  <!-- Hero Section -->
+  <section class="hero-section" aria-labelledby="hero-heading">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 id="hero-heading" class="hero-title">
+          Custom Floating Shelves
+          <span class="subtitle">Modern Wall Shelving & Display Solutions</span>
+        </h1>
+        <p class="hero-description">
+          Transform your walls into sophisticated display and storage areas with custom floating shelves that 
+          create the illusion of effortless beauty. I craft minimalist wall shelving solutions using premium 
+          materials and hidden mounting systems that showcase your books, décor, and personal treasures while 
+          maintaining clean, modern aesthetics. From single statement pieces to comprehensive wall arrangements, 
+          every floating shelf system is designed to enhance your space with functional elegance.
+        </p>
+        <div class="hero-actions">
+          <button class="cta-primary" (click)="onGetQuoteClick()" aria-label="Get started for free with custom floating shelves">
+            Get Started for Free
+          </button>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="/assets/floating-shelves/shelves.jpg" 
+             alt="Custom floating shelves with sophisticated textured melamine finish displaying books and décor in modern minimalist style"
+             loading="eager"
+             width="600"
+             height="400">
+      </div>
+    </div>
+  </section>
+
+  <!-- Introduction Section -->
+  <section class="introduction-section" aria-labelledby="intro-heading">
+    <div class="container">
+      <h2 id="intro-heading">Why Choose My Custom Floating Shelves?</h2>
+      <p class="intro-text">
+        At Deez Cabinuts, I understand that modern living demands smart, beautiful storage solutions that enhance 
+        rather than clutter your space. That's why I'm personally dedicated to creating custom floating shelf 
+        systems that provide the perfect balance of function and form. With over a decade of experience in 
+        precision woodworking and minimalist design, I create floating shelves that seem to defy gravity while 
+        providing rock-solid support for your treasured items.
+      </p>
+      <p class="intro-text">
+        I work closely with you to understand your display needs, wall space, and aesthetic preferences. Whether 
+        you need a simple floating shelf for your living room, a comprehensive kitchen storage system, or an 
+        artistic arrangement for your office, I create personalized floating shelf solutions that maximize your 
+        wall space while maintaining the clean, uncluttered look that defines modern living.
+      </p>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features-section" aria-labelledby="features-heading">
+    <div class="container">
+      <h2 id="features-heading">What Makes My Floating Shelves Special</h2>
+      <div class="features-grid">
+        <article class="feature-card" *ngFor="let feature of features">
+          <div class="feature-icon" [attr.aria-label]="feature.icon + ' icon'">{{ feature.icon }}</div>
+          <h3 class="feature-title">{{ feature.title }}</h3>
+          <p class="feature-description">{{ feature.description }}</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Shelf Styles Section -->
+  <section class="styles-section" aria-labelledby="styles-heading">
+    <div class="container">
+      <h2 id="styles-heading">Custom Floating Shelf Solutions for Every Space</h2>
+      <p class="section-intro">
+        Whether you need functional storage for your kitchen, elegant display shelving for your living room, 
+        or organizational solutions for your office, I have custom floating shelf designs that will transform 
+        your walls into beautiful, functional space. Each system is tailored to your specific needs and aesthetic preferences.
+      </p>
+      
+      <div class="styles-grid">
+        <article class="style-card" *ngFor="let style of shelfStyles">
+          <div class="style-content">
+            <h3 class="style-name">{{ style.name }}</h3>
+            <p class="style-description">{{ style.description }}</p>
+            <ul class="style-features" aria-label="Features of {{ style.name }} solution">
+              <li *ngFor="let feature of style.features">{{ feature }}</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Materials Section -->
+  <section class="materials-section" aria-labelledby="materials-heading">
+    <div class="container">
+      <h2 id="materials-heading">Premium Materials for Modern Shelving</h2>
+      <p class="section-intro">
+        Your floating shelves need to support your valuable items while maintaining their beauty over time. 
+        That's why I select only premium materials with excellent strength-to-weight ratios and stunning 
+        finishes that enhance your space while providing reliable, long-lasting performance.
+      </p>
+      
+      <div class="materials-grid">
+        <article class="material-card" *ngFor="let material of materials">
+          <h3 class="material-name">{{ material.name }}</h3>
+          <p class="material-description">{{ material.description }}</p>
+          <ul class="material-benefits" [attr.aria-label]="'Benefits of ' + material.name">
+            <li *ngFor="let benefit of material.benefits">{{ benefit }}</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Design Features Section -->
+  <section class="design-section" aria-labelledby="design-heading">
+    <div class="container">
+      <div class="design-content">
+        <div class="design-text">
+          <h2 id="design-heading">Precision Design & Engineering Features</h2>
+          <p>
+            Creating perfect floating shelves requires precision engineering and attention to detail. 
+            I incorporate advanced design features that ensure your shelves not only look stunning but 
+            also provide reliable performance while maintaining the clean, minimalist aesthetic that 
+            defines modern floating shelf design.
+          </p>
+          <ul class="design-list" aria-label="Available design features">
+            <li *ngFor="let feature of designFeatures">{{ feature }}</li>
+          </ul>
+        </div>
+        <div class="design-image">
+          <img src="/assets/floating-shelves/shelves.jpg" 
+               alt="Detailed view of floating shelf design features including hidden mounting and precision engineering"
+               loading="lazy"
+               width="500"
+               height="400">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Finishes Section -->
+  <section class="finishes-section" aria-labelledby="finishes-heading">
+    <div class="container">
+      <h2 id="finishes-heading">Contemporary Finishes for Modern Floating Shelves</h2>
+      <p class="section-intro">
+        Create the perfect minimalist aesthetic with my premium finish collection. These sophisticated surfaces 
+        offer the beauty of natural materials with the practical benefits of easy maintenance—ideal for floating 
+        shelves that need to look pristine while handling daily use in your modern living space.
+      </p>
+      
+      <div class="finishes-showcase">
+        <div class="finish-samples">
+          <img src="/assets/floating-shelves/shelves.jpg" 
+               alt="Collection of contemporary finish samples perfect for custom floating shelves and modern wall shelving"
+               loading="lazy"
+               width="600"
+               height="400">
+        </div>
+        <div class="finishes-list">
+          <h3>Finish Options:</h3>
+          <ul aria-label="Floating shelf finish options">
+            <li *ngFor="let finish of finishOptions">{{ finish }}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section class="process-section" aria-labelledby="process-heading">
+    <div class="container">
+      <h2 id="process-heading">My Custom Floating Shelf Process</h2>
+      <p class="section-intro">
+        From initial space assessment to final styling, my streamlined process ensures your floating shelf 
+        project is completed efficiently and to your complete satisfaction. Here's what you can expect when 
+        you choose Deez Cabinuts for your wall transformation.
+      </p>
+      
+      <div class="process-steps">
+        <article class="process-step" *ngFor="let step of processSteps">
+          <div class="step-number">{{ step.step }}</div>
+          <div class="step-content">
+            <h3 class="step-title">{{ step.title }}</h3>
+            <p class="step-description">{{ step.description }}</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="benefits-section" aria-labelledby="benefits-heading">
+    <div class="container">
+      <h2 id="benefits-heading">Benefits of Custom Floating Shelves</h2>
+      <div class="benefits-grid">
+        <div class="benefits-text">
+          <p>
+            Investing in custom floating shelves transforms not just your wall space, but your entire approach 
+            to organization and display. When you choose a custom floating shelf solution from Deez Cabinuts, 
+            you're investing in precision-engineered storage that brings modern functionality and aesthetic 
+            appeal to your most important living spaces.
+          </p>
+          <ul class="benefits-list" aria-label="Benefits of custom floating shelves">
+            <li *ngFor="let benefit of benefits">{{ benefit }}</li>
+          </ul>
+        </div>
+        <div class="benefits-image">
+          <img src="/assets/floating-shelves/shelves.jpg" 
+               alt="Custom floating shelf installation showing modern display solutions and sophisticated minimalist design"
+               loading="lazy"
+               width="500"
+               height="400">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section" aria-labelledby="faq-heading">
+    <div class="container">
+      <h2 id="faq-heading">Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <article class="faq-item" *ngFor="let faq of faqs">
+          <h3 class="faq-question">{{ faq.question }}</h3>
+          <p class="faq-answer">{{ faq.answer }}</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section" aria-labelledby="cta-heading">
+    <div class="container">
+      <div class="cta-content">
+        <h2 id="cta-heading">Ready to Transform Your Walls?</h2>
+        <p class="cta-text">
+          Don't let your walls remain empty canvases when they could be sophisticated display and storage 
+          solutions. Get started with Deez Cabinuts today for a free consultation. I'm ready to help you 
+          design and build the custom floating shelves that will transform your space with modern elegance 
+          and functional beauty.
+        </p>
+        <div class="cta-actions">
+          <button class="cta-primary large" (click)="onGetQuoteClick()" aria-label="Get started for free with custom floating shelves">
+            Get Started for Free
+          </button>
+        </div>
+        <p class="cta-guarantee">
+          <strong>100% Satisfaction Guarantee</strong> - I'm not happy until you're completely satisfied with your beautiful floating shelf transformation.
+        </p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- Structured Data for SEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Custom Floating Shelves",
+  "description": "Premium custom floating shelf design and installation services. Transform your walls with modern shelving for books, décor, and storage featuring sophisticated textured melamine and hardwood finishes.",
+  "provider": {
+    "@type": "Organization",
+    "name": "Deez Cabinuts",
+    "url": "https://deezcabnuts.com"
+  },
+  "areaServed": {
+    "@type": "Place",
+    "name": "Local Service Area"
+  },
+  "serviceType": "Custom Floating Shelf Installation",
+  "offers": {
+    "@type": "Offer",
+    "description": "Free consultation and quote for custom floating shelves"
+  }
+}
+</script>

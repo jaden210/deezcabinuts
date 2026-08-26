@@ -1,0 +1,194 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "deezcabnuts": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "",
+      "sourceRoot": "src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:application",
+          "options": {
+            "outputPath": "dist/deezcabnuts",
+            "index": "src/index.html",
+            "browser": "src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "public"
+              },
+              "src/sitemap.xml",
+              "src/robots.txt",
+              "src/manifest.json",
+              "src/humans.txt",
+              "src/.htaccess",
+              {
+                "glob": "**/*",
+                "input": "src/assets",
+                "output": "assets"
+              }
+            ],
+            "styles": [
+              "src/styles.scss"
+            ],
+            "scripts": [],
+            "server": "src/main.server.ts",
+            "prerender": true,
+            "ssr": {
+              "entry": "src/server.ts"
+            }
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2MB",
+                  "maximumError": "3MB"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "15kB",
+                  "maximumError": "20kB"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "deezcabnuts:build:production"
+            },
+            "development": {
+              "buildTarget": "deezcabnuts:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "tsconfig.spec.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "public"
+              }
+            ],
+            "styles": [
+              "src/styles.scss"
+            ],
+            "scripts": []
+          }
+        },
+        "serve-ssr": {
+          "builder": "@angular-devkit/build-angular:ssr-dev-server",
+          "configurations": {
+            "development": {
+              "buildTarget": "deezcabnuts:build:development"
+            },
+            "production": {
+              "buildTarget": "deezcabnuts:build:production"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "prerender": {
+          "builder": "@angular-devkit/build-angular:prerender",
+          "options": {
+            "routes": [
+              "/",
+              "/home",
+              "/service-areas",
+              "/services",
+              "/services/kitchen-cabinets",
+              "/services/pantry-cabinets",
+              "/services/wet-bar-cabinets",
+              "/services/bathroom-cabinets",
+              "/services/laundry-room-cabinets",
+              "/services/walk-in-closet-systems",
+              "/services/bedroom-cabinets",
+              "/services/living-room-cabinetry",
+              "/services/entertainment-centers",
+              "/services/mantels",
+              "/services/floating-shelves",
+              "/services/home-office-cabinets",
+              "/services/garage-storage-solutions",
+              "/services/mudroom-cabinets",
+              "/services/new-construction-cabinetry",
+              "/services/home-renovation-cabinet-services",
+              "/get-started",
+              "/locations/cedar-city",
+              "/locations/enoch",
+              "/locations/parowan",
+              "/locations/paragonah",
+              "/locations/cedar-highlands",
+              "/locations/summit",
+              "/locations/st-george",
+              "/locations/washington",
+              "/locations/hurricane",
+              "/locations/santa-clara",
+              "/locations/ivins",
+              "/locations/la-verkin",
+              "/locations/springdale",
+              "/locations/toquerville",
+              "/locations/enterprise",
+              "/locations/leeds",
+              "/locations/hildale",
+              "/locations/little-valley",
+              "/locations/bloomington",
+              "/locations/bloomington-hills",
+              "/locations/washington-fields",
+              "/locations/desert-canyons",
+              "/locations/desert-color",
+              "/locations/sun-river",
+              "/locations/green-valley",
+              "/locations/dixie-springs",
+              "/locations/coral-canyon",
+              "/locations/dixie-downs"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "deezcabnuts:build:production"
+            },
+            "development": {
+              "buildTarget": "deezcabnuts:build:development"
+            }
+          },
+          "defaultConfiguration": "production"
+        }
+      }
+    }
+  }
+}

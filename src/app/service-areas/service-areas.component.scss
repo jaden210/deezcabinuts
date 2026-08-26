@@ -1,0 +1,245 @@
+// Service Areas Page Styles
+
+.service-areas-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.service-areas-header {
+  text-align: center;
+  margin-bottom: 3rem;
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+    color: #7f8c8d;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+}
+
+
+
+.service-areas-content {
+  .county-section {
+    margin-bottom: 4rem;
+    
+    .county-header {
+      text-align: center;
+      margin-bottom: 3rem;
+      
+      h3 {
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: var(--primary-brown);
+        margin-bottom: 1rem;
+      }
+      
+      .county-divider {
+        width: 100px;
+        height: 3px;
+        background: linear-gradient(90deg, var(--primary-brown), var(--accent-gold));
+        margin: 0 auto;
+        border-radius: 2px;
+      }
+    }
+    
+    .locations-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      
+      .location-card {
+        background: var(--white);
+        border-radius: 12px;
+        padding: 2rem;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        transition: all 0.3s ease;
+        border: 1px solid var(--gray-light);
+        
+        &:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+          border-color: var(--primary-brown);
+        }
+        
+        .location-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 1rem;
+          
+          h4 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary-brown);
+            margin: 0;
+          }
+          
+          .location-icon {
+            font-size: 1.5rem;
+            opacity: 0.7;
+          }
+        }
+        
+        .location-actions {
+          .location-link {
+            color: var(--primary-brown);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+            
+            &:hover {
+              color: var(--accent-gold);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// CTA Section
+.cta {
+  background-color: var(--primary-brown);
+  color: var(--white);
+
+  h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--white);
+  }
+
+  p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+    color: var(--white);
+  }
+
+  .cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+
+    .btn-primary {
+      background-color: var(--white);
+      color: var(--primary-brown);
+      border: 2px solid var(--white);
+
+      &:hover {
+        background-color: var(--cream);
+        color: var(--primary-brown);
+        border-color: var(--cream);
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-md);
+      }
+    }
+  }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  .service-areas-container {
+    padding: 1rem;
+  }
+
+  .service-areas-header {
+    h1 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
+
+  .service-areas-content {
+    .county-section {
+      .county-header {
+        h3 {
+          font-size: 1.6rem;
+        }
+      }
+      
+      .locations-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        
+        .location-card {
+          padding: 1.5rem;
+          
+          .location-header {
+            h4 {
+              font-size: 1.3rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  .cta {
+    h2 {
+      font-size: 1.8rem;
+    }
+    
+    p {
+      font-size: 1rem;
+    }
+    
+    .cta-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+
+
+@media (max-width: 480px) {
+  .service-areas-header {
+    h1 {
+      font-size: 1.8rem;
+    }
+  }
+
+  .service-areas-content {
+    .county-section {
+      .county-header {
+        h3 {
+          font-size: 1.4rem;
+        }
+      }
+      
+      .locations-grid {
+        .location-card {
+          padding: 1.25rem;
+          
+          .location-header {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.5rem;
+            
+            h4 {
+              font-size: 1.2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

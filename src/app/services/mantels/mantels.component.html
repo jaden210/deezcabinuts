@@ -1,0 +1,278 @@
+<!-- Mantels Page - SEO Optimized -->
+<main class="mantels-page" role="main">
+  
+  <!-- Hero Section -->
+  <section class="hero-section" aria-labelledby="hero-heading">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 id="hero-heading" class="hero-title">
+          Custom Mantels
+          <span class="subtitle">Fireplace Mantels & Architectural Surrounds</span>
+        </h1>
+        <p class="hero-description">
+          Transform your fireplace into a stunning focal point with custom-crafted mantels that perfectly blend 
+          beauty, functionality, and architectural elegance. I create traditional, contemporary, and rustic 
+          fireplace mantels using premium materials and expert craftsmanship that enhance your living space 
+          while providing the perfect display area for your personal style. From simple floating shelves to 
+          elaborate traditional surrounds, every mantel is designed to create the perfect gathering space 
+          for your family and guests.
+        </p>
+        <div class="hero-actions">
+          <button class="cta-primary" (click)="onGetQuoteClick()" aria-label="Get started for free with custom mantels">
+            Get Started for Free
+          </button>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="/assets/kitchen/mantel-hero.jpg" 
+             alt="Custom fireplace mantel with sophisticated textured melamine finish creating an elegant focal point"
+             loading="eager"
+             width="600"
+             height="400">
+      </div>
+    </div>
+  </section>
+
+  <!-- Introduction Section -->
+  <section class="introduction-section" aria-labelledby="intro-heading">
+    <div class="container">
+      <h2 id="intro-heading">Why Choose My Custom Mantels?</h2>
+      <p class="intro-text">
+        At Deez Cabinuts, I understand that your fireplace is more than a heat source—it's the heart of your 
+        home where family gathers and memories are made. That's why I'm personally dedicated to creating custom 
+        mantel solutions that not only enhance your fireplace's beauty but also reflect your personal style and 
+        complement your home's architecture. With over a decade of experience in custom millwork and fireplace 
+        design, I combine traditional craftsmanship with modern safety standards.
+      </p>
+      <p class="intro-text">
+        I work closely with you to understand your fireplace type, room layout, and design preferences. Whether 
+        you envision a grand traditional mantel with rich details, a sleek contemporary floating shelf, or a 
+        rustic farmhouse design, I create personalized mantels that transform your fireplace into the stunning 
+        focal point your room deserves while ensuring proper safety clearances and installation.
+      </p>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features-section" aria-labelledby="features-heading">
+    <div class="container">
+      <h2 id="features-heading">What Makes My Mantels Special</h2>
+      <div class="features-grid">
+        <article class="feature-card" *ngFor="let feature of features">
+          <div class="feature-icon" [attr.aria-label]="feature.icon + ' icon'">{{ feature.icon }}</div>
+          <h3 class="feature-title">{{ feature.title }}</h3>
+          <p class="feature-description">{{ feature.description }}</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mantel Styles Section -->
+  <section class="styles-section" aria-labelledby="styles-heading">
+    <div class="container">
+      <h2 id="styles-heading">Custom Mantel Solutions for Every Style</h2>
+      <p class="section-intro">
+        Whether your home features traditional architecture or contemporary design, I have custom mantel 
+        solutions that will enhance your fireplace and create the perfect focal point for your space. Each 
+        design is tailored to your specific fireplace type, room proportions, and style preferences.
+      </p>
+      
+      <div class="styles-grid">
+        <article class="style-card" *ngFor="let style of mantelStyles">
+          <div class="style-content">
+            <h3 class="style-name">{{ style.name }}</h3>
+            <p class="style-description">{{ style.description }}</p>
+            <ul class="style-features" aria-label="Features of {{ style.name }} solution">
+              <li *ngFor="let feature of style.features">{{ feature }}</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Materials Section -->
+  <section class="materials-section" aria-labelledby="materials-heading">
+    <div class="container">
+      <h2 id="materials-heading">Premium Materials for Fireplace Applications</h2>
+      <p class="section-intro">
+        Your mantel must withstand the unique environment near a fireplace while maintaining its beauty for 
+        years to come. That's why I select only premium materials with excellent heat resistance and durability, 
+        ensuring your mantel remains stunning and safe in your fireplace environment.
+      </p>
+      
+      <div class="materials-grid">
+        <article class="material-card" *ngFor="let material of materials">
+          <h3 class="material-name">{{ material.name }}</h3>
+          <p class="material-description">{{ material.description }}</p>
+          <ul class="material-benefits" [attr.aria-label]="'Benefits of ' + material.name">
+            <li *ngFor="let benefit of material.benefits">{{ benefit }}</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Design Features Section -->
+  <section class="design-section" aria-labelledby="design-heading">
+    <div class="container">
+      <div class="design-content">
+        <div class="design-text">
+          <h2 id="design-heading">Thoughtful Design & Architectural Details</h2>
+          <p>
+            Great mantel design is about creating the perfect balance of proportion, function, and beauty. 
+            I incorporate architectural details and practical features that enhance both the visual impact 
+            and functionality of your fireplace area while ensuring proper safety clearances and installation.
+          </p>
+          <ul class="design-list" aria-label="Available design features">
+            <li *ngFor="let feature of designFeatures">{{ feature }}</li>
+          </ul>
+        </div>
+        <div class="design-image">
+          <img src="/assets/kitchen/mantel-design.jpg" 
+               alt="Detailed view of custom mantel design features including architectural details and proportions"
+               loading="lazy"
+               width="500"
+               height="400">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Finishes Section -->
+  <section class="finishes-section" aria-labelledby="finishes-heading">
+    <div class="container">
+      <h2 id="finishes-heading">Elegant Finishes for Fireplace Mantels</h2>
+      <p class="section-intro">
+        Create the perfect fireplace ambiance with my premium finish collection. These sophisticated surfaces 
+        offer the beauty of natural materials with the durability needed for fireplace applications—ideal for 
+        mantels that need to look stunning while withstanding the unique environment near your fireplace.
+      </p>
+      
+      <div class="finishes-showcase">
+        <div class="finish-samples">
+          <img src="/assets/kitchen/mantel-finish-samples.jpg" 
+               alt="Collection of elegant finish samples perfect for custom fireplace mantels and surrounds"
+               loading="lazy"
+               width="600"
+               height="400">
+        </div>
+        <div class="finishes-list">
+          <h3>Finish Options:</h3>
+          <ul aria-label="Mantel finish options">
+            <li *ngFor="let finish of finishOptions">{{ finish }}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section class="process-section" aria-labelledby="process-heading">
+    <div class="container">
+      <h2 id="process-heading">My Custom Mantel Process</h2>
+      <p class="section-intro">
+        From initial fireplace assessment to final installation, my streamlined process ensures your custom 
+        mantel project is completed safely, efficiently, and to your complete satisfaction. Here's what you 
+        can expect when you choose Deez Cabinuts for your fireplace transformation.
+      </p>
+      
+      <div class="process-steps">
+        <article class="process-step" *ngFor="let step of processSteps">
+          <div class="step-number">{{ step.step }}</div>
+          <div class="step-content">
+            <h3 class="step-title">{{ step.title }}</h3>
+            <p class="step-description">{{ step.description }}</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="benefits-section" aria-labelledby="benefits-heading">
+    <div class="container">
+      <h2 id="benefits-heading">Benefits of Custom Fireplace Mantels</h2>
+      <div class="benefits-grid">
+        <div class="benefits-text">
+          <p>
+            Investing in a custom mantel transforms not just your fireplace, but your entire room's atmosphere 
+            and functionality. When you choose a custom mantel solution from Deez Cabinuts, you're investing 
+            in architectural craftsmanship that brings beauty, functionality, and increased home value to your 
+            most important gathering space.
+          </p>
+          <ul class="benefits-list" aria-label="Benefits of custom mantels">
+            <li *ngFor="let benefit of benefits">{{ benefit }}</li>
+          </ul>
+        </div>
+        <div class="benefits-image">
+          <img src="/assets/kitchen/mantel-benefits.jpg" 
+               alt="Custom mantel installation showing elegant architectural integration and sophisticated design"
+               loading="lazy"
+               width="500"
+               height="400">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section" aria-labelledby="faq-heading">
+    <div class="container">
+      <h2 id="faq-heading">Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <article class="faq-item" *ngFor="let faq of faqs">
+          <h3 class="faq-question">{{ faq.question }}</h3>
+          <p class="faq-answer">{{ faq.answer }}</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section" aria-labelledby="cta-heading">
+    <div class="container">
+      <div class="cta-content">
+        <h2 id="cta-heading">Ready to Transform Your Fireplace?</h2>
+        <p class="cta-text">
+          Don't let your fireplace remain an overlooked element in your room. Get started with Deez Cabinuts 
+          today for a free consultation. I'm ready to help you design and build the custom mantel that will 
+          transform your fireplace into the stunning focal point that brings warmth and elegance to your home.
+        </p>
+        <div class="cta-actions">
+          <button class="cta-primary large" (click)="onGetQuoteClick()" aria-label="Get started for free with custom mantels">
+            Get Started for Free
+          </button>
+        </div>
+        <p class="cta-guarantee">
+          <strong>100% Satisfaction Guarantee</strong> - I'm not happy until you're completely satisfied with your beautiful fireplace transformation.
+        </p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- Structured Data for SEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Custom Mantels",
+  "description": "Premium custom fireplace mantel design and installation services. Transform your fireplace with beautiful mantels and surrounds featuring sophisticated textured melamine and hardwood finishes.",
+  "provider": {
+    "@type": "Organization",
+    "name": "Deez Cabinuts",
+    "url": "https://deezcabnuts.com"
+  },
+  "areaServed": {
+    "@type": "Place",
+    "name": "Local Service Area"
+  },
+  "serviceType": "Custom Fireplace Mantel Installation",
+  "offers": {
+    "@type": "Offer",
+    "description": "Free consultation and quote for custom mantels"
+  }
+}
+</script>

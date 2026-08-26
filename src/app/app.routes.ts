@@ -1,0 +1,103 @@
+import { Routes } from '@angular/router';
+import { HomeComponent } from './home/home.component';
+import { ServiceAreasComponent } from './service-areas/service-areas.component';
+import { ServicesComponent } from './services/services.component';
+import { GetStartedComponent } from './get-started/get-started.component';
+import { KitchenCabinetsComponent } from './services/kitchen-cabinets/kitchen-cabinets.component';
+import { PantryCabinetsComponent } from './services/pantry-cabinets/pantry-cabinets.component';
+import { WetBarCabinetsComponent } from './services/wet-bar-cabinets/wet-bar-cabinets.component';
+import { BathroomCabinetsComponent } from './services/bathroom-cabinets/bathroom-cabinets.component';
+import { LaundryRoomCabinetsComponent } from './services/laundry-room-cabinets/laundry-room-cabinets.component';
+import { WalkInClosetSystemsComponent } from './services/walk-in-closet-systems/walk-in-closet-systems.component';
+import { BedroomCabinetsComponent } from './services/bedroom-cabinets/bedroom-cabinets.component';
+import { LivingRoomCabinetryComponent } from './services/living-room-cabinetry/living-room-cabinetry.component';
+import { EntertainmentCentersComponent } from './services/entertainment-centers/entertainment-centers.component';
+import { MantelsComponent } from './services/mantels/mantels.component';
+import { FloatingShelvesComponent } from './services/floating-shelves/floating-shelves.component';
+import { HomeOfficeCabinetsComponent } from './services/home-office-cabinets/home-office-cabinets.component';
+import { GarageStorageSolutionsComponent } from './services/garage-storage-solutions/garage-storage-solutions.component';
+import { MudroomCabinetsComponent } from './services/mudroom-cabinets/mudroom-cabinets.component';
+import { NewConstructionCabinetryComponent } from './services/new-construction-cabinetry/new-construction-cabinetry.component';
+import { HomeRenovationCabinetServicesComponent } from './services/home-renovation-cabinet-services/home-renovation-cabinet-services.component';
+import { CedarCityComponent } from './locations/cedar-city/cedar-city.component';
+import { EnochComponent } from './locations/enoch/enoch.component';
+import { ParowanComponent } from './locations/parowan/parowan.component';
+import { ParagonahComponent } from './locations/paragonah/paragonah.component';
+import { CedarHighlandsComponent } from './locations/cedar-highlands/cedar-highlands.component';
+import { SummitComponent } from './locations/summit/summit.component';
+import { StGeorgeComponent } from './locations/st-george/st-george.component';
+import { WashingtonComponent } from './locations/washington/washington.component';
+import { HurricaneComponent } from './locations/hurricane/hurricane.component';
+import { SantaClaraComponent } from './locations/santa-clara/santa-clara.component';
+import { IvinsComponent } from './locations/ivins/ivins.component';
+import { LaVerkinComponent } from './locations/la-verkin/la-verkin.component';
+import { SpringdaleComponent } from './locations/springdale/springdale.component';
+import { ToquervilleComponent } from './locations/toquerville/toquerville.component';
+import { EnterpriseComponent } from './locations/enterprise/enterprise.component';
+import { LeedsComponent } from './locations/leeds/leeds.component';
+import { HildaleComponent } from './locations/hildale/hildale.component';
+import { LittleValleyComponent } from './locations/little-valley/little-valley.component';
+import { BloomingtonComponent } from './locations/bloomington/bloomington.component';
+import { BloomingtonHillsComponent } from './locations/bloomington-hills/bloomington-hills.component';
+import { WashingtonFieldsComponent } from './locations/washington-fields/washington-fields.component';
+import { DesertCanyonsComponent } from './locations/desert-canyons/desert-canyons.component';
+import { DesertColorComponent } from './locations/desert-color/desert-color.component';
+import { SunRiverComponent } from './locations/sun-river/sun-river.component';
+import { GreenValleyComponent } from './locations/green-valley/green-valley.component';
+import { DixieSpringsComponent } from './locations/dixie-springs/dixie-springs.component';
+import { CoralCanyonComponent } from './locations/coral-canyon/coral-canyon.component';
+import { DixieDownsComponent } from './locations/dixie-downs/dixie-downs.component';
+
+export const routes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'home', component: HomeComponent },
+  { path: 'service-areas', component: ServiceAreasComponent },
+  { path: 'services', component: ServicesComponent },
+  { path: 'services/kitchen-cabinets', component: KitchenCabinetsComponent },
+  { path: 'services/pantry-cabinets', component: PantryCabinetsComponent },
+  { path: 'services/wet-bar-cabinets', component: WetBarCabinetsComponent },
+  { path: 'services/bathroom-cabinets', component: BathroomCabinetsComponent },
+  { path: 'services/laundry-room-cabinets', component: LaundryRoomCabinetsComponent },
+  { path: 'services/walk-in-closet-systems', component: WalkInClosetSystemsComponent },
+  { path: 'services/bedroom-cabinets', component: BedroomCabinetsComponent },
+  { path: 'services/living-room-cabinetry', component: LivingRoomCabinetryComponent },
+  { path: 'services/entertainment-centers', component: EntertainmentCentersComponent },
+  { path: 'services/mantels', component: MantelsComponent },
+  { path: 'services/floating-shelves', component: FloatingShelvesComponent },
+  { path: 'services/home-office-cabinets', component: HomeOfficeCabinetsComponent },
+  { path: 'services/garage-storage-solutions', component: GarageStorageSolutionsComponent },
+  { path: 'services/mudroom-cabinets', component: MudroomCabinetsComponent },
+  { path: 'services/new-construction-cabinetry', component: NewConstructionCabinetryComponent },
+  { path: 'services/home-renovation-cabinet-services', component: HomeRenovationCabinetServicesComponent },
+  { path: 'get-started', component: GetStartedComponent },
+  { path: 'locations/cedar-city', component: CedarCityComponent },
+  { path: 'locations/enoch', component: EnochComponent },
+  { path: 'locations/parowan', component: ParowanComponent },
+  { path: 'locations/paragonah', component: ParagonahComponent },
+  { path: 'locations/cedar-highlands', component: CedarHighlandsComponent },
+  { path: 'locations/summit', component: SummitComponent },
+  { path: 'locations/st-george', component: StGeorgeComponent },
+  { path: 'locations/washington', component: WashingtonComponent },
+  { path: 'locations/hurricane', component: HurricaneComponent },
+  { path: 'locations/santa-clara', component: SantaClaraComponent },
+  { path: 'locations/ivins', component: IvinsComponent },
+  { path: 'locations/la-verkin', component: LaVerkinComponent },
+  { path: 'locations/springdale', component: SpringdaleComponent },
+  { path: 'locations/toquerville', component: ToquervilleComponent },
+  { path: 'locations/enterprise', component: EnterpriseComponent },
+  { path: 'locations/leeds', component: LeedsComponent },
+  { path: 'locations/hildale', component: HildaleComponent },
+  { path: 'locations/little-valley', component: LittleValleyComponent },
+  { path: 'locations/bloomington', component: BloomingtonComponent },
+  { path: 'locations/bloomington-hills', component: BloomingtonHillsComponent },
+  { path: 'locations/washington-fields', component: WashingtonFieldsComponent },
+  { path: 'locations/desert-canyons', component: DesertCanyonsComponent },
+  { path: 'locations/desert-color', component: DesertColorComponent },
+  { path: 'locations/sun-river', component: SunRiverComponent },
+  { path: 'locations/green-valley', component: GreenValleyComponent },
+  { path: 'locations/dixie-springs', component: DixieSpringsComponent },
+  { path: 'locations/coral-canyon', component: CoralCanyonComponent },
+  { path: 'locations/dixie-downs', component: DixieDownsComponent },
+  // Add more routes here as we build them
+  { path: '**', redirectTo: '' }
+];

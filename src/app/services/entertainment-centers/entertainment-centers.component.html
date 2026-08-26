@@ -1,0 +1,277 @@
+<!-- Entertainment Centers Page - SEO Optimized -->
+<main class="entertainment-centers-page" role="main">
+  
+  <!-- Hero Section -->
+  <section class="hero-section" aria-labelledby="hero-heading">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 id="hero-heading" class="hero-title">
+          Custom Entertainment Centers
+          <span class="subtitle">TV Stands & Media Console Solutions</span>
+        </h1>
+        <p class="hero-description">
+          Transform your entertainment experience with custom-built entertainment centers that perfectly accommodate 
+          your TV, equipment, and lifestyle. I create sophisticated media consoles, TV stands, and home theater 
+          systems with smart cable management, optimal equipment ventilation, and beautiful integration that makes 
+          your entertainment space both functional and stunning. From sleek modern designs to traditional furniture 
+          styles, every piece is crafted to enhance your viewing experience.
+        </p>
+        <div class="hero-actions">
+          <button class="cta-primary" (click)="onGetQuoteClick()" aria-label="Get started for free with entertainment centers">
+            Get Started for Free
+          </button>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="/assets/entertainment/entertainment.jpg" 
+             alt="Custom entertainment center with TV mounting and sophisticated textured melamine finishes"
+             loading="eager"
+             width="600"
+             height="400">
+      </div>
+    </div>
+  </section>
+
+  <!-- Introduction Section -->
+  <section class="introduction-section" aria-labelledby="intro-heading">
+    <div class="container">
+      <h2 id="intro-heading">Why Choose My Custom Entertainment Centers?</h2>
+      <p class="intro-text">
+        At Deez Cabinuts, I understand that your entertainment center is more than furniture—it's the focal point 
+        of your family's gathering space and the hub of your home entertainment experience. That's why I'm personally 
+        dedicated to creating custom entertainment center solutions that not only house your technology beautifully 
+        but also enhance your daily entertainment enjoyment. With over a decade of experience in custom entertainment 
+        furniture and AV integration, I combine technical expertise with aesthetic excellence.
+      </p>
+      <p class="intro-text">
+        I work closely with you to understand your entertainment equipment, viewing preferences, and space requirements. 
+        Whether you need a sleek wall-mounted system, a traditional media console, or a comprehensive home theater 
+        solution, I create personalized entertainment centers that make your technology work seamlessly while 
+        creating a beautiful focal point in your room.
+      </p>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features-section" aria-labelledby="features-heading">
+    <div class="container">
+      <h2 id="features-heading">What Makes My Entertainment Centers Special</h2>
+      <div class="features-grid">
+        <article class="feature-card" *ngFor="let feature of features">
+          <div class="feature-icon" [attr.aria-label]="feature.icon + ' icon'">{{ feature.icon }}</div>
+          <h3 class="feature-title">{{ feature.title }}</h3>
+          <p class="feature-description">{{ feature.description }}</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Entertainment Styles Section -->
+  <section class="styles-section" aria-labelledby="styles-heading">
+    <div class="container">
+      <h2 id="styles-heading">Custom Entertainment Center Solutions for Every Space</h2>
+      <p class="section-intro">
+        Whether you have a cozy family room or a dedicated home theater, I have custom entertainment center 
+        solutions that will transform your space into the perfect entertainment environment. Each design is 
+        tailored to your specific equipment, room layout, and viewing preferences.
+      </p>
+      
+      <div class="styles-grid">
+        <article class="style-card" *ngFor="let style of entertainmentStyles">
+          <div class="style-content">
+            <h3 class="style-name">{{ style.name }}</h3>
+            <p class="style-description">{{ style.description }}</p>
+            <ul class="style-features" aria-label="Features of {{ style.name }} solution">
+              <li *ngFor="let feature of style.features">{{ feature }}</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Materials Section -->
+  <section class="materials-section" aria-labelledby="materials-heading">
+    <div class="container">
+      <h2 id="materials-heading">Premium Materials for Entertainment Furniture</h2>
+      <p class="section-intro">
+        Your entertainment center needs to handle heavy equipment, daily use, and provide the stability required 
+        for optimal performance. That's why I source only the finest materials and robust construction techniques 
+        to ensure your entertainment center provides both beauty and reliable functionality for years to come.
+      </p>
+      
+      <div class="materials-grid">
+        <article class="material-card" *ngFor="let material of materials">
+          <h3 class="material-name">{{ material.name }}</h3>
+          <p class="material-description">{{ material.description }}</p>
+          <ul class="material-benefits" [attr.aria-label]="'Benefits of ' + material.name">
+            <li *ngFor="let benefit of material.benefits">{{ benefit }}</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technology Features Section -->
+  <section class="technology-section" aria-labelledby="technology-heading">
+    <div class="container">
+      <div class="technology-content">
+        <div class="technology-text">
+          <h2 id="technology-heading">Advanced Technology Integration & Features</h2>
+          <p>
+            Modern entertainment centers must seamlessly integrate with today's technology while remaining 
+            adaptable for future upgrades. I incorporate intelligent technology features that enhance your 
+            entertainment experience while keeping everything organized, accessible, and properly maintained.
+          </p>
+          <ul class="technology-list" aria-label="Available technology features">
+            <li *ngFor="let feature of technologyFeatures">{{ feature }}</li>
+          </ul>
+        </div>
+        <div class="technology-image">
+          <img src="/assets/entertainment/entertainment.jpg" 
+               alt="Detailed view of entertainment center technology integration including cable management and component storage"
+               loading="lazy"
+               width="500"
+               height="400">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Finishes Section -->
+  <section class="finishes-section" aria-labelledby="finishes-heading">
+    <div class="container">
+      <h2 id="finishes-heading">Contemporary Textured Melamine Finishes for Entertainment</h2>
+      <p class="section-intro">
+        Create the perfect entertainment ambiance with my premium textured melamine collection. These sophisticated 
+        surfaces offer the beauty of natural materials with the practical benefits of easy maintenance—ideal for 
+        entertainment furniture that sees daily use and needs to look pristine for years.
+      </p>
+      
+      <div class="finishes-showcase">
+        <div class="finish-samples">
+          <img src="/assets/entertainment/entertainment.jpg" 
+               alt="Collection of contemporary textured melamine finish samples perfect for entertainment centers"
+               loading="lazy"
+               width="600"
+               height="400">
+        </div>
+        <div class="finishes-list">
+          <h3>Textured Melamine Options:</h3>
+          <ul aria-label="Entertainment center finish options">
+            <li *ngFor="let finish of finishOptions">{{ finish }}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section class="process-section" aria-labelledby="process-heading">
+    <div class="container">
+      <h2 id="process-heading">My Entertainment Center Process</h2>
+      <p class="section-intro">
+        From initial entertainment assessment to final system optimization, my streamlined process ensures your 
+        entertainment center project is completed efficiently and to your complete satisfaction. Here's what you 
+        can expect when you choose Deez Cabinuts for your entertainment transformation.
+      </p>
+      
+      <div class="process-steps">
+        <article class="process-step" *ngFor="let step of processSteps">
+          <div class="step-number">{{ step.step }}</div>
+          <div class="step-content">
+            <h3 class="step-title">{{ step.title }}</h3>
+            <p class="step-description">{{ step.description }}</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="benefits-section" aria-labelledby="benefits-heading">
+    <div class="container">
+      <h2 id="benefits-heading">Benefits of Custom Entertainment Centers</h2>
+      <div class="benefits-grid">
+        <div class="benefits-text">
+          <p>
+            Investing in a custom entertainment center transforms not just your equipment storage, but your entire 
+            entertainment experience. When you choose a custom entertainment solution from Deez Cabinuts, you're 
+            investing in furniture-quality pieces that bring organization, beauty, and optimal functionality to 
+            your most important entertainment space.
+          </p>
+          <ul class="benefits-list" aria-label="Benefits of custom entertainment centers">
+            <li *ngFor="let benefit of benefits">{{ benefit }}</li>
+          </ul>
+        </div>
+        <div class="benefits-image">
+          <img src="/assets/entertainment/entertainment.jpg" 
+               alt="Custom entertainment center installation showing sophisticated design and technology integration"
+               loading="lazy"
+               width="500"
+               height="400">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section" aria-labelledby="faq-heading">
+    <div class="container">
+      <h2 id="faq-heading">Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <article class="faq-item" *ngFor="let faq of faqs">
+          <h3 class="faq-question">{{ faq.question }}</h3>
+          <p class="faq-answer">{{ faq.answer }}</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section" aria-labelledby="cta-heading">
+    <div class="container">
+      <div class="cta-content">
+        <h2 id="cta-heading">Ready to Transform Your Entertainment Experience?</h2>
+        <p class="cta-text">
+          Don't let another movie night be compromised by equipment chaos and cable clutter. Get started with 
+          Deez Cabinuts today for a free consultation. I'm ready to help you design and build the custom 
+          entertainment center that will make your space the sophisticated entertainment destination your family deserves.
+        </p>
+        <div class="cta-actions">
+          <button class="cta-primary large" (click)="onGetQuoteClick()" aria-label="Get started for free with entertainment centers">
+            Get Started for Free
+          </button>
+        </div>
+        <p class="cta-guarantee">
+          <strong>100% Satisfaction Guarantee</strong> - I'm not happy until you're completely satisfied with your perfect entertainment transformation.
+        </p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- Structured Data for SEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Custom Entertainment Centers",
+  "description": "Premium custom entertainment center design and installation services. Transform your entertainment space with TV stands, media consoles, and home theater systems featuring smart cable management and sophisticated textured melamine finishes.",
+  "provider": {
+    "@type": "Organization",
+    "name": "Deez Cabinuts",
+    "url": "https://deezcabnuts.com"
+  },
+  "areaServed": {
+    "@type": "Place",
+    "name": "Local Service Area"
+  },
+  "serviceType": "Custom Entertainment Center Installation",
+  "offers": {
+    "@type": "Offer",
+    "description": "Free consultation and quote for custom entertainment centers"
+  }
+}
+</script>

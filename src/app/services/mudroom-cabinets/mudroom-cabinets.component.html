@@ -1,0 +1,293 @@
+<!-- Mudroom Cabinets Page - SEO Optimized -->
+<main class="mudroom-cabinets-page" role="main">
+  
+  <!-- Hero Section -->
+  <section class="hero-section" aria-labelledby="hero-heading">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 id="hero-heading" class="hero-title">
+          Custom Mudroom Cabinets
+          <span class="subtitle">Entryway Storage & Organization Solutions</span>
+        </h1>
+        <p class="hero-description">
+          Transform your entryway into a welcoming, organized space with custom mudroom cabinets that eliminate 
+          clutter and create functional storage for your entire family. I design integrated mudroom solutions 
+          including cubbies, benches, hooks, and storage areas using family-friendly materials and expert 
+          craftsmanship. From complete mudroom transformations to compact entryway solutions, every system is 
+          designed to handle daily family life while maintaining the beauty and functionality that makes your 
+          home welcoming. Experience the peace of mind that comes with a perfectly organized entryway.
+        </p>
+        <div class="hero-actions">
+          <button class="cta-primary" (click)="onGetQuoteClick()" aria-label="Get started for free with custom mudroom cabinets">
+            Get Started for Free
+          </button>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="/assets/mudroom/mud.jpg" 
+             alt="Custom mudroom cabinets with family organization cubbies and beautiful textured melamine finish for welcoming entryway storage"
+             loading="eager"
+             width="600"
+             height="400">
+      </div>
+    </div>
+  </section>
+
+  <!-- Introduction Section -->
+  <section class="introduction-section" aria-labelledby="intro-heading">
+    <div class="container">
+      <h2 id="intro-heading">Why Choose My Custom Mudroom Cabinets?</h2>
+      <p class="intro-text">
+        At Deez Cabinuts, I understand that your entryway sets the tone for your entire home—it's the first 
+        impression for guests and the daily transition zone for your family. That's why I'm personally dedicated 
+        to creating custom mudroom cabinet solutions that bring order to the chaos while creating a welcoming 
+        atmosphere that reflects your family's lifestyle. With over a decade of experience in family-focused 
+        storage design and entryway organization, I combine practical functionality with beautiful aesthetics 
+        to deliver mudroom solutions that truly serve your family's needs.
+      </p>
+      <p class="intro-text">
+        I work closely with you to understand your family's daily routines, storage challenges, and entryway 
+        space constraints. Whether you need a complete mudroom transformation, compact entryway storage, family 
+        activity centers, or pet-friendly solutions, I create personalized mudroom cabinet systems that adapt 
+        to your family's lifestyle while maintaining the organized, welcoming environment that makes every 
+        homecoming a pleasure. From busy school mornings to weekend adventures, my mudroom solutions support 
+        your family's active life.
+      </p>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features-section" aria-labelledby="features-heading">
+    <div class="container">
+      <h2 id="features-heading">What Makes My Mudroom Cabinets Special</h2>
+      <div class="features-grid">
+        <article class="feature-card" *ngFor="let feature of features">
+          <div class="feature-icon" [attr.aria-label]="feature.icon + ' icon'">{{ feature.icon }}</div>
+          <h3 class="feature-title">{{ feature.title }}</h3>
+          <p class="feature-description">{{ feature.description }}</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mudroom Solutions Section -->
+  <section class="solutions-section" aria-labelledby="solutions-heading">
+    <div class="container">
+      <h2 id="solutions-heading">Custom Mudroom Solutions for Every Family</h2>
+      <p class="section-intro">
+        Whether you have a large family with diverse storage needs, a compact entryway that needs maximum 
+        efficiency, or special requirements for pets and activities, I have mudroom cabinet designs that 
+        will transform your entryway into an organized, functional space. Each system is tailored to your 
+        family's specific routines, space, and lifestyle.
+      </p>
+      
+      <div class="solutions-grid">
+        <article class="solution-card" *ngFor="let solution of mudroomSolutions">
+          <div class="solution-image">
+            <img [src]="solution.imageUrl || '/assets/mudroom/mudroom-solution-placeholder.jpg'" 
+                 [alt]="solution.name + ' mudroom cabinet solution example'"
+                 loading="lazy"
+                 width="400"
+                 height="300">
+          </div>
+          <div class="solution-content">
+            <h3 class="solution-name">{{ solution.name }}</h3>
+            <p class="solution-description">{{ solution.description }}</p>
+            <ul class="solution-features" aria-label="Features of {{ solution.name }} solution">
+              <li *ngFor="let feature of solution.features">{{ feature }}</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Materials Section -->
+  <section class="materials-section" aria-labelledby="materials-heading">
+    <div class="container">
+      <h2 id="materials-heading">Family-Friendly Materials for Daily Use</h2>
+      <p class="section-intro">
+        Your mudroom cabinets need to withstand daily family use, moisture from wet clothing and shoes, 
+        and the occasional bump or scrape from busy family life. That's why I select only materials 
+        specifically designed for entryway environments, ensuring your storage systems remain beautiful 
+        and functional despite the demanding conditions mudrooms face every day.
+      </p>
+      
+      <div class="materials-grid">
+        <article class="material-card" *ngFor="let material of materials">
+          <h3 class="material-name">{{ material.name }}</h3>
+          <p class="material-description">{{ material.description }}</p>
+          <ul class="material-benefits" [attr.aria-label]="'Benefits of ' + material.name">
+            <li *ngFor="let benefit of material.benefits">{{ benefit }}</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Design Features Section -->
+  <section class="design-section" aria-labelledby="design-heading">
+    <div class="container">
+      <div class="design-content">
+        <div class="design-text">
+          <h2 id="design-heading">Family-Focused Design & Organization Features</h2>
+          <p>
+            Creating effective mudroom storage requires understanding family dynamics, daily routines, and 
+            the unique challenges of entryway organization. I incorporate thoughtful design features that 
+            not only maximize storage efficiency but also create systems that work for every family member, 
+            from toddlers to adults, ensuring your mudroom serves your family beautifully for years to come.
+          </p>
+          <ul class="design-list" aria-label="Available design features">
+            <li *ngFor="let feature of designFeatures">{{ feature }}</li>
+          </ul>
+        </div>
+        <div class="design-image">
+          <img src="/assets/mudroom/mud2.jpg" 
+               alt="Detailed view of mudroom cabinet design features including family cubbies, bench seating, and organization systems"
+               loading="lazy"
+               width="500"
+               height="400">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Finishes Section -->
+  <section class="finishes-section" aria-labelledby="finishes-heading">
+    <div class="container">
+      <h2 id="finishes-heading">Welcoming Finishes for Beautiful Entryways</h2>
+      <p class="section-intro">
+        Create an entryway that welcomes your family home every day with my family-friendly finish collection. 
+        These beautiful surfaces are specifically designed to withstand daily family use while maintaining 
+        their appearance—ideal for mudroom storage that needs to look great while handling the demands of 
+        active family life and busy entryway traffic.
+      </p>
+      
+      <div class="finishes-showcase">
+        <div class="finish-samples">
+          <img src="/assets/mudroom/mud.jpg" 
+               alt="Collection of family-friendly finish samples perfect for custom mudroom cabinets and entryway organization"
+               loading="lazy"
+               width="600"
+               height="400">
+        </div>
+        <div class="finishes-list">
+          <h3>Family-Friendly Finish Options:</h3>
+          <ul aria-label="Mudroom cabinet finish options">
+            <li *ngFor="let finish of finishOptions">{{ finish }}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section class="process-section" aria-labelledby="process-heading">
+    <div class="container">
+      <h2 id="process-heading">My Custom Mudroom Cabinet Process</h2>
+      <p class="section-intro">
+        From initial family assessment to final organization setup, my family-focused process ensures your 
+        mudroom transformation enhances your daily routines and exceeds your organizational expectations. 
+        Here's what you can expect when you choose Deez Cabinuts for your entryway transformation.
+      </p>
+      
+      <div class="process-steps">
+        <article class="process-step" *ngFor="let step of processSteps">
+          <div class="step-number">{{ step.step }}</div>
+          <div class="step-content">
+            <h3 class="step-title">{{ step.title }}</h3>
+            <p class="step-description">{{ step.description }}</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="benefits-section" aria-labelledby="benefits-heading">
+    <div class="container">
+      <h2 id="benefits-heading">Benefits of Custom Mudroom Cabinets</h2>
+      <div class="benefits-grid">
+        <div class="benefits-text">
+          <p>
+            Investing in custom mudroom cabinets transforms not just your entryway, but your entire family's 
+            daily experience of home. When you choose a custom mudroom solution from Deez Cabinuts, you're 
+            investing in a system that grows with your family, creates lasting organization habits, and 
+            provides the welcoming foundation that makes every day smoother and more enjoyable for everyone.
+          </p>
+          <ul class="benefits-list" aria-label="Benefits of custom mudroom cabinets">
+            <li *ngFor="let benefit of benefits">{{ benefit }}</li>
+          </ul>
+        </div>
+        <div class="benefits-image">
+          <img src="/assets/mudroom/mud2.jpg" 
+               alt="Custom mudroom cabinet installation showing organized family entryway transformation and welcoming functionality"
+               loading="lazy"
+               width="500"
+               height="400">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section" aria-labelledby="faq-heading">
+    <div class="container">
+      <h2 id="faq-heading">Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <article class="faq-item" *ngFor="let faq of faqs">
+          <h3 class="faq-question">{{ faq.question }}</h3>
+          <p class="faq-answer">{{ faq.answer }}</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section" aria-labelledby="cta-heading">
+    <div class="container">
+      <div class="cta-content">
+        <h2 id="cta-heading">Ready to Transform Your Entryway?</h2>
+        <p class="cta-text">
+          Don't let an disorganized entryway create stress for your family's daily routines. Get started 
+          with Deez Cabinuts today for a free consultation. I'm ready to help you design and build the 
+          custom mudroom cabinets that will organize your entryway, welcome your family home, and create 
+          the functional foundation that makes every day smoother and more enjoyable for everyone.
+        </p>
+        <div class="cta-actions">
+          <button class="cta-primary large" (click)="onGetQuoteClick()" aria-label="Get started for free with custom mudroom cabinets">
+            Get Started for Free
+          </button>
+        </div>
+        <p class="cta-guarantee">
+          <strong>100% Satisfaction Guarantee</strong> - I'm not happy until you're completely satisfied with your organized entryway transformation.
+        </p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- Structured Data for SEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Custom Mudroom Cabinets",
+  "description": "Premium custom mudroom cabinet design and installation services. Transform your entryway with organized storage, cubbies, and benches featuring family-friendly textured melamine and hardwood finishes for welcoming organization.",
+  "provider": {
+    "@type": "Organization",
+    "name": "Deez Cabinuts",
+    "url": "https://deezcabnuts.com"
+  },
+  "areaServed": {
+    "@type": "Place",
+    "name": "Local Service Area"
+  },
+  "serviceType": "Custom Mudroom Cabinet Installation",
+  "offers": {
+    "@type": "Offer",
+    "description": "Free consultation and quote for custom mudroom cabinets"
+  }
+}
+</script>
