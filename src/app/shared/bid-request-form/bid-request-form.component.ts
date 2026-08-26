@@ -1,6 +1,6 @@
 import { CommonModule, isPlatformBrowser } from '@angular/common';
-import { Component, Inject, Input, PLATFORM_ID } from '@angular/core';
-import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
+import { Component, Inject, Input, PLATFORM_ID, inject } from '@angular/core';
+import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-bid-request-form',
@@ -30,22 +30,24 @@ export class BidRequestFormComponent {
   submitError = '';
   submitted = false;
   sending = false;
+  readonly form: FormGroup;
 
-  readonly form = this.fb.group({
-    company: ['', Validators.required],
-    name: ['', Validators.required],
-    email: ['', [Validators.required, Validators.email]],
-    projectType: ['', Validators.required],
-    city: ['', Validators.required],
-    fulfillment: ['', Validators.required],
-    plansNotes: [''],
-    website: ['']
-  });
+  private readonly fb = inject(FormBuilder);
 
   constructor(
-    private fb: FormBuilder,
     @Inject(PLATFORM_ID) private platformId: Object
-  ) {}
+  ) {
+    this.form = this.fb.group({
+      company: ['', Validators.required],
+      name: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      projectType: ['', Validators.required],
+      city: ['', Validators.required],
+      fulfillment: ['', Validators.required],
+      plansNotes: [''],
+      website: ['']
+    });
+  }
 
   get mailtoHref(): string {
     const subject = encodeURIComponent('Bid request from deezcabnuts.com');

@@ -17,25 +17,25 @@
       <label class="field">
         <span>Company</span>
         <input type="text" formControlName="company" autocomplete="organization">
-        <small class="error" *ngIf="form.controls.company.touched && form.controls.company.invalid">Company is required.</small>
+        <small class="error" *ngIf="form.get('company')?.touched && form.get('company')?.invalid">Company is required.</small>
       </label>
 
       <label class="field">
         <span>Your name</span>
         <input type="text" formControlName="name" autocomplete="name">
-        <small class="error" *ngIf="form.controls.name.touched && form.controls.name.invalid">Name is required.</small>
+        <small class="error" *ngIf="form.get('name')?.touched && form.get('name')?.invalid">Name is required.</small>
       </label>
 
       <label class="field">
         <span>Email</span>
         <input type="email" formControlName="email" autocomplete="email">
-        <small class="error" *ngIf="form.controls.email.touched && form.controls.email.invalid">A valid email is required so we can reply.</small>
+        <small class="error" *ngIf="form.get('email')?.touched && form.get('email')?.invalid">A valid email is required so we can reply.</small>
       </label>
 
       <label class="field">
         <span>Project city</span>
         <input type="text" formControlName="city" autocomplete="address-level2">
-        <small class="error" *ngIf="form.controls.city.touched && form.controls.city.invalid">City is required.</small>
+        <small class="error" *ngIf="form.get('city')?.touched && form.get('city')?.invalid">City is required.</small>
       </label>
 
       <label class="field">
@@ -44,7 +44,7 @@
           <option value="" disabled>Select one</option>
           <option *ngFor="let type of projectTypes" [value]="type.value">{{ type.label }}</option>
         </select>
-        <small class="error" *ngIf="form.controls.projectType.touched && form.controls.projectType.invalid">Choose a project type.</small>
+        <small class="error" *ngIf="form.get('projectType')?.touched && form.get('projectType')?.invalid">Choose a project type.</small>
       </label>
 
       <label class="field">
@@ -53,7 +53,7 @@
           <option value="" disabled>Select one</option>
           <option *ngFor="let option of fulfillmentOptions" [value]="option.value">{{ option.label }}</option>
         </select>
-        <small class="error" *ngIf="form.controls.fulfillment.touched && form.controls.fulfillment.invalid">Choose supply only or install.</small>
+        <small class="error" *ngIf="form.get('fulfillment')?.touched && form.get('fulfillment')?.invalid">Choose supply only or install.</small>
       </label>
     </div>
 
